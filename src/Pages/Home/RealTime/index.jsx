@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function RealTime() {
-  return <div>index</div>;
-}
+const RealTime = () => {
+  return <div>RealTime</div>;
+};
+
+export default RealTime;
