@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Times from "./Pages/Times";
 import Contratos from "./Pages/Contratos";
@@ -8,17 +8,15 @@ import Forecast from "./Pages/Home/Forecast";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<RealTime />} />
-          <Route path="/realtime" element={<RealTime />} />
-          <Route path="/forecasts" element={<Forecast />} />
-        </Route>
-        <Route path="/Contratos" element={<Contratos />} />
-        <Route path="/Times" element={<Times />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}>
+        <Route index element={<RealTime />} />
+        <Route path="/realtime" element={<RealTime />} />
+        <Route path="/forecasts" element={<Forecast />} />
+      </Route>
+      <Route path="/Contratos" element={<Contratos />} />
+      <Route path="/Times" element={<Times />} />
+    </Routes>
   );
 };
 export default AppRoutes;

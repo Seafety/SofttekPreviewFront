@@ -1,0 +1,47 @@
+@import "../../../Styles/variables";
+
+.header {
+  width: 100vw;
+  padding: 0.5rem 7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
+  background: var(--Branco, #fff);
+  box-shadow: 0 -3px 21px 0 var(--Color, #0d296e);
+
+  .nav {
+    width: 25vw;
+
+    &_ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &_li {
+      cursor: pointer;
+      &_active {
+        color: #0d296e;
+        font-weight: 600;
+      }
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+        color: #7fbe41;
+        font-weight: 500;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
