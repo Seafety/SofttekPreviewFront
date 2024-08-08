@@ -6,14 +6,9 @@
 
 .app-container {
   font-family: $font-stack;
-  color: $black;
   a {
     text-decoration: none;
     color: $black;
-
-    &:hover {
-      color: #0d296e;
-    }
   }
   .main-content {
     margin: 2rem 7rem;
