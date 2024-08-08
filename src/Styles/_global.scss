@@ -1,0 +1,19 @@
+/* Importando outros arquivos SCSS */
+@import "reset";
+@import "variables";
+@import "mixins";
+
+/* Estilos globais */
+body {
+  font-family: $font-stack;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    color: #0d296e;
+  }
+}
