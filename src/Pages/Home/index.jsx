@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import HomeTemplate from "../../Components/Templates/HomeTemplate";
 
 const Home = () => {
   return (
-    <body>
+    <HomeTemplate>
       <nav>
         <li>
           <Link to="/realtime">Real-Time</Link>
@@ -13,7 +14,7 @@ const Home = () => {
         </li>
       </nav>
       <Outlet />
-    </body>
+    </HomeTemplate>
   );
 };
 export default Home;

@@ -1,7 +1,11 @@
 import React from "react";
-import { ReactComponent as SofttekPreviewLogo } from "../../../Assets/Logo.svg";
+import SofttekPreviewLogo from "../../../Assets/Logo.svg";
 const Logo = () => {
-  return <SofttekPreviewLogo />;
+  return (
+    <>
+      <img src={SofttekPreviewLogo} alt="" />
+    </>
+  );
 };
 
 export default Logo;
