@@ -1,11 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header from "../../Organisms/Header/Index";
+import { Link } from "react-router-dom";
 
 function HomeTemplate({ children }) {
   return (
     <>
-      <Header />
+      <nav>
+        <li>
+          <Link to="/realtime">Real-Time</Link>
+        </li>
+        <li>
+          <Link to="/forecasts">Forecast</Link>
+        </li>
+      </nav>
       {children}
     </>
   );
