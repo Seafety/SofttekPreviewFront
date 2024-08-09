@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import Logo from "../../Atoms/Logo";
 import { Link } from "react-router-dom";
-import Menu from "../../Atoms/Menu";
+import MenuIcon from "../../Atoms/MenuIcon";
 import styles from "./index.module.scss";
 import { HeaderContext } from "../../../Context/HeaderContext";
 
@@ -39,7 +39,7 @@ const HeaderComponent = () => {
           </li>
         </ul>
       </nav>
-      <Menu />
+      <MenuIcon />
     </header>
   );
 };
