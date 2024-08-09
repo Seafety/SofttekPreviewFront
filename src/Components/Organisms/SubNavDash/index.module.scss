@@ -1,0 +1,29 @@
+@import "../../../Styles/variables";
+
+.subnave_section {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &_links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    li {
+      color: $black;
+      &:hover {
+        color: #0d296e;
+        font-weight: 500;
+        border-bottom: 2px solid #0d296e;
+        transition: color 0.2s ease-out;
+        transition: font-weight 0.2s ease-out;
+      }
+    }
+  }
+}
