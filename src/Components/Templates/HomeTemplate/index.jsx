@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Status from "../../Atoms/Status";
 
 function HomeTemplate({ children }) {
   return (
@@ -13,6 +14,10 @@ function HomeTemplate({ children }) {
           <Link to="/forecasts">Forecast</Link>
         </li>
       </nav>
+      <Status status="normal" />
+      <Status status="anormal" />
+      <Status status="critico" />
+
       {children}
     </>
   );

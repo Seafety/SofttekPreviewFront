@@ -1,0 +1,27 @@
+@import "../../../Styles/variables";
+
+.status {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 6rem;
+
+  &_normal {
+    padding: 0.2rem;
+    border-radius: 38px;
+    color: $normal;
+    background: rgba(127, 190, 65, 0.28);
+  }
+  &_anormal {
+    padding: 0.2rem;
+    border-radius: 38px;
+    color: $anormal;
+    background: rgba(255, 130, 61, 0.4);
+  }
+  &_critico {
+    padding: 0.2rem;
+    border-radius: 38px;
+    color: $critico;
+    background: rgba(255, 0, 0, 0.29);
+  }
+}
