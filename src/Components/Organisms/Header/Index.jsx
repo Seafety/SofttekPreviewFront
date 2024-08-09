@@ -1,13 +1,25 @@
 // Header.jsx
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../Atoms/Logo";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "../../Atoms/MenuIcon";
 import styles from "./index.module.scss";
-import { HeaderContext } from "../../../Context/HeaderContext";
 
 const HeaderComponent = () => {
-  const { activeNav, onActiveNav } = useContext(HeaderContext);
+  const location = useLocation();
+  const [activeNav, setActiveNav] = useState("");
+
+  useEffect(() => {
+    const path = location.pathname.toLowerCase();
+    if (path === "/realtime" || path === "/forecasts" || path === "/") {
+      setActiveNav("DashBoard");
+    } else if (path === "/contratos") {
+      setActiveNav("Contratos");
+    } else if (path === "/times") {
+      setActiveNav("Times");
+    }
+  }, [location]);
+
   return (
     <header className={styles.header}>
       <Logo />
@@ -17,7 +29,7 @@ const HeaderComponent = () => {
             className={`${styles.nav_li} ${
               activeNav === "DashBoard" ? styles.nav_li_active : ""
             }`}
-            onClick={() => onActiveNav("DashBoard")}
+            onClick={() => setActiveNav("DashBoard")}
           >
             <Link to="/">DashBoard</Link>
           </li>
@@ -25,17 +37,17 @@ const HeaderComponent = () => {
             className={`${styles.nav_li} ${
               activeNav === "Contratos" ? styles.nav_li_active : ""
             }`}
-            onClick={() => onActiveNav("Contratos")}
+            onClick={() => setActiveNav("Contratos")}
           >
-            <Link to="/Contratos">Contratos</Link>
+            <Link to="/contratos">Contratos</Link>
           </li>
           <li
             className={`${styles.nav_li} ${
               activeNav === "Times" ? styles.nav_li_active : ""
             }`}
-            onClick={() => onActiveNav("Times")}
+            onClick={() => setActiveNav("Times")}
           >
-            <Link to="/Times">Times</Link>
+            <Link to="/times">Times</Link>
           </li>
         </ul>
       </nav>

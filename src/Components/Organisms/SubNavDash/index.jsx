@@ -7,9 +7,10 @@ const SubNavDash = () => {
   const [activeSubnav, setActiveSubNav] = useState("Real-Time");
 
   useEffect(() => {
-    if (location.pathname === "/realtime") {
+    const path = location.pathname.toLowerCase();
+    if (path === "/realtime") {
       setActiveSubNav("Real-Time");
-    } else if (location.pathname === "/forecasts") {
+    } else if (path === "/forecasts") {
       setActiveSubNav("Forecast");
     }
   }, [location]);
