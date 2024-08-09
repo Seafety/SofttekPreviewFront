@@ -46,7 +46,10 @@
       }
     }
   }
-
+  &_links_active {
+    font-weight: 600;
+    color: $active_green;
+  }
   &_span {
     position: absolute;
     top: 0;
