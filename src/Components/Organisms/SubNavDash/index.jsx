@@ -13,7 +13,9 @@ const SubNavDash = () => {
           <Link to="/forecasts">Forecast</Link>
         </li>
       </nav>
-      <ModuleSelect />
+      <span className={styles.subnave_section_span}>
+        <ModuleSelect />
+      </span>
     </section>
   );
 };
