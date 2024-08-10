@@ -1,0 +1,26 @@
+.infoBox {
+  border-radius: 12px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 10rem;
+
+  .infoBox_title {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .infoBox_info {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+  }
+}
