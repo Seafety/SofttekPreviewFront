@@ -35,6 +35,14 @@ const HeaderComponent = () => {
           </li>
           <li
             className={`${styles.nav_li} ${
+              activeNav === "Demandas" ? styles.nav_li_active : ""
+            }`}
+            onClick={() => setActiveNav("Demandas")}
+          >
+            <Link to="/demandas">Demandas</Link>
+          </li>
+          <li
+            className={`${styles.nav_li} ${
               activeNav === "Contratos" ? styles.nav_li_active : ""
             }`}
             onClick={() => setActiveNav("Contratos")}
