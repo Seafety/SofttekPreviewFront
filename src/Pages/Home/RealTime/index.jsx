@@ -1,5 +1,5 @@
 import React from "react";
-import FinanceSection from "../../../Components/Organisms/FinanceVision";
+import FinanceSection from "../../../Components/Organisms/FinanceSection";
 
 const RealTime = () => {
   return (
