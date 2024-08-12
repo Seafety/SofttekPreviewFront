@@ -1,7 +1,12 @@
 import React from "react";
+import FinanceSection from "../../../Components/Organisms/FinanceVision";
 
 const RealTime = () => {
-  return <div>RealTime</div>;
+  return (
+    <>
+      <FinanceSection />
+    </>
+  );
 };
 
 export default RealTime;
