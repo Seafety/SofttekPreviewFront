@@ -1,0 +1,75 @@
+// ChatBox.module.scss
+$active_blue: #0d296e;
+$active_green: #7fbe41;
+
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+  border: 2px solid $active_blue;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-bottom: 2px solid $active_blue;
+}
+
+.userMessage {
+  background-color: $active_green;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+  max-width: 80%;
+}
+
+.botMessage {
+  background-color: $active_blue;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.loading {
+  font-style: italic;
+  color: $active_blue;
+}
+
+.input {
+  border: none;
+  border-top: 2px solid $active_blue;
+  padding: 10px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+}
+
+.sendButton {
+  border: none;
+  padding: 10px;
+  background-color: $active_blue;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($active_blue, 10%);
+  }
+
+  &:disabled {
+    background-color: lighten($active_blue, 20%);
+    cursor: not-allowed;
+  }
+}

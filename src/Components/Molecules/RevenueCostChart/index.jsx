@@ -50,10 +50,6 @@ const RevenueCostChart = ({ data }) => {
       legend: {
         position: "top",
       },
-      // title: {
-      //   display: true,
-      //   text: "Faturamento vs. Custo",
-      // },
     },
   };
 
