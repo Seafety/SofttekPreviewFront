@@ -18,6 +18,9 @@ const HeaderComponent = () => {
     } else if (path === "/times") {
       setActiveNav("Times");
     }
+    else if (path === "/demandas" || path === "/data" || path === "/board") {
+      setActiveNav("Demandas")
+    }
   }, [location]);
 
   return (
