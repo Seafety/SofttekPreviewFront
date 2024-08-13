@@ -4,8 +4,9 @@ import DemandasTemplate from "../../Components/Templates/DemandasTemplate";
 
 const Demandas = () => {
   return <div>
-    <DemandasTemplate />
-    <Outlet />
+    <DemandasTemplate>
+      <Outlet />
+    </DemandasTemplate>
   </div>;
 };
 
