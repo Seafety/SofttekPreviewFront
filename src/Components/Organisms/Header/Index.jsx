@@ -18,6 +18,9 @@ const HeaderComponent = () => {
     } else if (path === "/times") {
       setActiveNav("Times");
     }
+    else if (path === "/demandas" || path === "/data" || path === "/board") {
+      setActiveNav("Demandas")
+    }
   }, [location]);
 
   return (
@@ -32,6 +35,14 @@ const HeaderComponent = () => {
             onClick={() => setActiveNav("DashBoard")}
           >
             <Link to="/">DashBoard</Link>
+          </li>
+          <li
+            className={`${styles.nav_li} ${
+              activeNav === "Demandas" ? styles.nav_li_active : ""
+            }`}
+            onClick={() => setActiveNav("Demandas")}
+          >
+            <Link to="/demandas">Demandas</Link>
           </li>
           <li
             className={`${styles.nav_li} ${
