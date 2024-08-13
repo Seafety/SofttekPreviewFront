@@ -10,10 +10,8 @@ const FinanceSection = () => {
     cost: [20000, 25000, 30000, 35000, 40000, 45000, 50000],
   };
 
-  // Calculando o lucro para cada mês
   const profit = data.revenue.map((rev, index) => rev - data.cost[index]);
 
-  // Calculando o lucro acumulado e o lucro do mês atual (último mês)
   const accumulatedProfit = profit.reduce((acc, curr) => acc + curr, 0);
   const currentMonthProfit = profit[profit.length - 1];
 
