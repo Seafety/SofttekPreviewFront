@@ -1,25 +1,64 @@
+@import "../../../Styles/variables";
+
 .contractTable {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
 
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+  thead {
+    background-color: $active_green;
+    color: #ffffff;
+    font-weight: 700;
+
+    th {
+      text-align: center;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      &:first-child {
+        border-top-left-radius: 10px;
+      }
+      &:last-child {
+        border-top-right-radius: 10px;
+      }
+    }
   }
 
-  th {
-    background-color: #f2f2f2;
-    color: #333;
-  }
+  tbody {
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+    }
 
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
 
-  tr:hover {
-    background-color: #f1f1f1;
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    td {
+      padding: 8px;
+      // border: 1px solid #ddd;
+      &:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: center;
+      }
+    }
+
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 10px;
+    }
+
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 10px;
+    }
   }
 }
