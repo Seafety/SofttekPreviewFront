@@ -2,13 +2,16 @@ import React from "react";
 import DashSection from "../../Templates/DashSectionTemplate";
 import styles from "./index.module.scss";
 import InfoBoxView from "../../Atoms/InfoBoxView";
-import alert from "../../../Assets/alert.svg";
+import alert_red from "../../../Assets/alert-red.svg";
+import alert_orange from "../../../Assets/alert-orange.svg";
+import alert_green from "../../../Assets/alert-green.svg";
+
 const ContractsSection = () => {
   const contractData = [
-    { type: "Desvio de Escopo", value: "23" },
-    { type: "Desvio de SLA", value: "46" },
-    { type: "Desvio Orçamentário", value: "12" },
-    { type: "Baixo NPS", value: "3" },
+    { type: "Desvio de Escopo", value: 0 },
+    { type: "Desvio de SLA", value: 46 },
+    { type: "Desvio Orçamentário", value: 12 },
+    { type: "Baixo NPS", value: 3 },
   ];
 
   const infoBoxe = (
@@ -34,8 +37,16 @@ const ContractsSection = () => {
             <tr key={index}>
               <td>{item.type}</td>
               <td>
-                {" "}
-                <img src={alert} alt="" />
+                <img
+                  src={
+                    item.value === 0
+                      ? alert_green
+                      : item.value < 10
+                      ? alert_orange
+                      : alert_red
+                  }
+                  alt="alerta"
+                />
                 {item.value}
               </td>
             </tr>
