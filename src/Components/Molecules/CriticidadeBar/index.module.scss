@@ -1,0 +1,69 @@
+.criticidadeBar {
+    .barContainer {
+        display: flex;
+        height: 30px;
+        border-radius: 15px !important;
+        overflow: hidden;
+        background: #e0e0e0;
+        position: relative;
+      }
+  
+    .barSegment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.9rem;
+      position: relative;
+  
+      &::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 15%; /* Posição acima do elemento */
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(0, 0, 0, 0.75);
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-out;
+        pointer-events: none;
+        z-index: 10;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: calc(100% - 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-out;
+        z-index: 10;
+      }
+  
+      &:hover::before, &:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0); /* Movimento para cima */
+        z-index: 10;
+      }
+    }
+  
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  }
+  

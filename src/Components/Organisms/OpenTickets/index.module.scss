@@ -1,0 +1,91 @@
+.chamadosAbertos {
+  
+    .chamadosList {
+      .chamadoItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        margin-bottom: 0.3rem;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+  
+      .dateTime {
+        flex: 2;
+        font-size: 0.8rem;
+        color: #888;
+      }
+  
+      .level {
+        flex: 1;
+        text-align: center;
+        .level_N1 {
+          background-color: #aae2f0;
+          color: #0277bd;
+        }
+        .level_N2 {
+          background-color: #faf38d;
+          color: #e99f00;
+        }
+        .level_N3 {
+          background-color: #f1afa3;
+          color: #e60000;
+        }
+        span {
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-weight: bold;
+        }
+      }
+  
+      .project {
+        flex: 1.5;
+        font-size: 0.85rem;
+        color: #333;
+      }
+  
+      .task {
+        flex: 2;
+        font-size: 0.85rem;
+        color: #333;
+        font-weight: 700;
+      }
+  
+      .department {
+        flex: 1.5;
+        font-size: 0.85rem;
+        color: #333;
+      }
+  
+      .hours {
+        flex: 1;
+        font-size: 0.85rem;
+        color: #333;
+        text-align: right;
+        strong {
+            font-weight: bold;
+        }
+      }
+  
+      .statusIcon {
+        flex: 0.5;
+        text-align: center;
+  
+        .status_up {
+          color: red;
+        }
+        .status_down {
+          color: blue;
+        }
+        .status_neutral {
+          color: orange;
+        }
+      }
+    }
+  }
+  
