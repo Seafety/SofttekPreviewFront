@@ -4,6 +4,9 @@ import Table from "../../../Components/Organisms/Table";
 import Status from "../../../Components/Atoms/Status";
 import styles from "../../../Components/Templates/DemandasTemplate/index.module.scss"
 import OpenTickets from "../../../Components/Organisms/OpenTickets";
+import CriticidadeBar from "../../../Components/Molecules/CriticidadeBar";
+import ComplexChart from "../../../Components/Organisms/ComplexChart";
+import ConclusionChart from "../../../Components/Organisms/ConclusionChart";
 
 const Data = () => {
 
@@ -11,6 +14,8 @@ const Data = () => {
   const table1Data = [
     ['DFLD', 'Daniel Ferreira', 'Qualidade', 'Senior' ],
     ['NSRL', 'Catarina Cardoso', 'Qualidade', 'Senior' ],
+    ['LROS', 'Louise Vina', 'Vendas', 'Pleno' ],
+    ['KDIE', 'Maisa Dantas', 'Compras', 'Junior' ],
   ];
 
   const table2Headers = ['Tickets', 'Nome', 'Módulo', 'Senioridade', 'Situação'];
@@ -97,6 +102,12 @@ const Data = () => {
     },
   ];
 
+  const criticidade = [
+    { label: 'Lowest', percentage: 22 , color: '#b3e5fc' },
+    { label: 'Medium', percentage: 42, color: '#dcedc8' },
+    { label: 'High', percentage: 36, color: '#ef9a9a' },
+  ];
+
   return (
     <>
       <div className={styles.dashSectionSmall}>
@@ -104,20 +115,30 @@ const Data = () => {
         <Table headers={table1Headers} data={table1Data} />
       </DashSection> 
       </div>
-      <div className={styles.dashSectionLarge}> 
+      <div className={styles.dashSectionSmall}> 
       <DashSection title="Chamados abertos">
         <OpenTickets chamados={chamados} />
       </DashSection>
       </div>
-      <div className={styles.dashSectionLarge}>
+      <div className={styles.dashSectionSmall}>
       <DashSection title="Chamados por Colaborador">
         <Table headers={table2Headers} data={formattedTable2Data} />
       </DashSection>
       </div>
-      <div className={styles.dashSectionSmall}>
-      <DashSection title="Tickets por criticidade">
+      <div className={styles.dashSectionSmall }>
+      <DashSection title="Taxa de conclusão dos chamados">
+        <ConclusionChart></ConclusionChart>
       </DashSection>
       </div>
+      <div className={styles.dashSectionSmall}>
+      <DashSection title="Tickets por criticidade">
+        <CriticidadeBar criticidade={criticidade} />
+      </DashSection>
+      </div>
+      <div className={styles.dashSectionLarge}>
+      <DashSection title="Tickets por complexidade">
+        <ComplexChart></ComplexChart>
+      </DashSection></div>
     </>
   );
 };
