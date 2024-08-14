@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SubNavDash from "../../Organisms/SubNavDash";
+import styles from "./index.module.scss";
 
 function DemandasTemplate({ children }) {
   return (
     <>
       <SubNavDash />
-      {children}
+      <div className={styles.gridContainer}>
+        {children}
+      </div>
     </>
   );
 }
