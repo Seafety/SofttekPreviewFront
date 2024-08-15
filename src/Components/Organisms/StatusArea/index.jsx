@@ -142,14 +142,12 @@ const StatusArea = () => {
     },
   ];
 
-  // Definindo uma prioridade de criticidade
   const priority = {
     CRITICO: 1,
     ANORMAL: 2,
     NORMAL: 3,
   };
 
-  // Ordenando as áreas por criticidade
   const sortedAreasData = areasData.sort(
     (a, b) => priority[a.status] - priority[b.status]
   );

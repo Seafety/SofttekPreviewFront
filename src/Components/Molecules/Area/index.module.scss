@@ -1,7 +1,7 @@
 .areaContainer {
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.6rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
   overflow: hidden;
@@ -23,7 +23,7 @@
         transition: transform 0.3s ease;
 
         &.arrowExpanded {
-          transform: rotate(90deg); // Gira a seta quando expandido
+          transform: rotate(90deg);
         }
       }
     }
@@ -36,7 +36,7 @@
     overflow: hidden;
 
     &.expanded {
-      max-height: 1000px; // Define uma altura máxima grande o suficiente para o conteúdo
+      max-height: 1000px;
       opacity: 1;
     }
 

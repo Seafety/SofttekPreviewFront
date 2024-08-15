@@ -1,20 +1,14 @@
 .scrollContainer {
-  max-height: 500px; /* Ajuste a altura máxima conforme necessário */
-  overflow-y: auto; /* Adiciona a barra de rolagem vertical */
-  padding-right: 10px; /* Adiciona espaço para a barra de rolagem */
+  max-height: 46vh;
+  overflow-y: auto;
+  padding-right: 9px;
 }
 
-/* Opcional: Estilizar a barra de rolagem */
 .scrollContainer::-webkit-scrollbar {
-  width: 8px; /* Largura da barra de rolagem */
+  width: 5px;
 }
-
-// .scrollContainer::-webkit-scrollbar-track {
-//   background: #f1f1f1; /* Cor do fundo da barra de rolagem */
-// }
 
 .scrollContainer::-webkit-scrollbar-thumb {
-  background-color: #0d296e; /* Cor do "polegar" da barra de rolagem */
-  border-radius: 10px; /* Borda arredondada no "polegar" */
-  border: 2px solid #f1f1f1; /* Borda ao redor do "polegar" */
+  background-color: #0d296e;
+  border-radius: 10px;
 }
