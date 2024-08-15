@@ -1,46 +1,88 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from "react";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import DashSection from "../../Templates/DashSectionTemplate";
 
-const data = [
-  { name: 'Complexidade', N1: 623, N2: 230, N3: 351 },
-];
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const ComplexChart = () => {
+  const data = { name: "Complexidade", N1: 623, N2: 230, N3: 351 };
+
+  const chartData = {
+    labels: [data.name],
+    datasets: [
+      {
+        label: "N1",
+        data: [data.N1],
+        borderColor: "#B3E8EF",
+        backgroundColor: "#B3E8EF",
+        borderRadius: 10,
+        fill: true,
+      },
+      {
+        label: "N2",
+        data: [data.N2],
+        borderColor: "#D2CCF7",
+        backgroundColor: "#D2CCF7",
+        borderRadius: 10,
+        fill: true,
+      },
+      {
+        label: "N3",
+        data: [data.N3],
+        borderColor: "#F6CDCD",
+        backgroundColor: "#F6CDCD",
+        borderRadius: 10,
+        fill: true,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+    },
+    animation: {
+      duration: 1000,
+      easing: "easeInOutQuad",
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          display: true,
+          borderDash: [3, 3],
+        },
+      },
+    },
+  };
+
   return (
-    <div style={{ width: '100%', height: 300 }}>
-      <ResponsiveContainer>
-        <BarChart 
-          data={data} 
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-          barGap={80} 
-          barSize={70} 
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar 
-            dataKey="N1" 
-            fill="#A5DDF5" 
-            name="N1" 
-            radius={[10, 10, 0, 0]} 
-          />
-          <Bar 
-            dataKey="N2" 
-            fill="#C9B6F5" 
-            name="N2" 
-            radius={[10, 10, 0, 0]} 
-          />
-          <Bar 
-            dataKey="N3" 
-            fill="#F5B6B6" 
-            name="N3" 
-            radius={[10, 10, 0, 0]} 
-          />
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
+    <DashSection title="Tickets por complexidade">
+      <Bar data={chartData} options={options} />
+    </DashSection>
   );
 };
 

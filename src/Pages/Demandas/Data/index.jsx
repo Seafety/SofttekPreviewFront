@@ -33,12 +33,12 @@ const Data = () => {
     ["1", "Jocelyn Gion", "Vendas", "Senior", "normal"],
   ];
 
-  const formattedTable2Data = table2Data.map((id, row) => [
+  const formattedTable2Data = table2Data.map((row) => [
     row[0],
     row[1],
     row[2],
     row[3],
-    <Status key={id} status={row[4]} />,
+    <Status status={row[4]} />,
   ]);
 
   const chamados = [
@@ -141,9 +141,7 @@ const Data = () => {
         </DashSection>
       </div>
       <div className={styles.dashSectionLarge}>
-        <DashSection title="Tickets por complexidade">
-          <ComplexChart></ComplexChart>
-        </DashSection>
+        <ComplexChart />
       </div>
     </>
   );
