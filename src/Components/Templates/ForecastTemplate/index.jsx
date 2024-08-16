@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SubNavDash from "../../Organisms/SubNavDash";
-import styles from "../DemandasTemplate/index.module.scss";
+import styles from "../ForecastTemplate/index.module.scss";
 
 function ForecastTemplate({ children }) {
     return (

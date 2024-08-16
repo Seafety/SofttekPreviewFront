@@ -1,0 +1,93 @@
+
+.tableContainer {
+  
+    .table {
+        .headerRow {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 2px solid #eaeaea;
+            font-weight: bold;
+            font-size: 14px;
+            justify-content: space-between
+          }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        margin-bottom: 0.3rem;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+}}
+
+.nullHeader,.iconCell {
+    width: 10%;
+    text-align: center;
+  
+    svg {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .nameCell {
+    width: 30%;
+    font-weight: bold;
+  }
+  
+  .lastQuarterCell,
+  .futureProjectionCell {
+    width: 20%;
+    text-align: center;
+  }
+  
+  .nullHeader,.statusCell {
+    width: 20%;
+    text-align: right;
+  
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Estilos específicos para cada tipo de ícone */
+
+  .icon_up2{
+    color: #37FD05;
+  }
+  .icon_up {
+    color: red;
+  }
+  
+  .icon_down {
+    color: blue;
+  }
+  
+  .icon_neutral {
+    color: yellow;
+  }
+  
+  .icon_estagiario {
+    color: #E9AD52;
+  }
+  
+  .icon_junior {
+    color: #FF823D;
+  }
+  
+  .icon_pleno {
+    color: #37FD05;
+  }
+  
+  .icon_senior {
+    color: #A69AEA;
+  }
+  
+  .icon_expert {
+    color: #6349FF;
+  }
