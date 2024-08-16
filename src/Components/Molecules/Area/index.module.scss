@@ -1,0 +1,86 @@
+.areaContainer {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0.6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  .areaHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    .areaNome {
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      .arrowIcon {
+        margin-right: 8px;
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+
+        &.arrowExpanded {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .areaContent {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+
+    &.expanded {
+      max-height: 1000px;
+      opacity: 1;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .chartContainer {
+      width: 100%;
+    }
+
+    .dataContent {
+      display: flex;
+      flex-direction: column;
+
+      .indicators {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 1rem;
+      }
+
+      .capacityBar {
+        margin-top: 1rem;
+        width: 100%;
+
+        .capacityLabel {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .capacityTrack {
+          background-color: #e9ecef;
+          border-radius: 5px;
+          overflow: hidden;
+          width: 100%;
+          height: 0.5rem;
+        }
+
+        .capacityFill {
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

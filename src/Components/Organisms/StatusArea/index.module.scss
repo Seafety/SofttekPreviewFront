@@ -1,0 +1,14 @@
+.scrollContainer {
+  max-height: 46vh;
+  overflow-y: auto;
+  padding-right: 9px;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #0d296e;
+  border-radius: 10px;
+}

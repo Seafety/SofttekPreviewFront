@@ -3,8 +3,8 @@
   background-color: #ffffff;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 35vw;
-
+  width: 41vw;
+  height: fit-content;
   .section_header {
     display: flex;
     align-items: center;
@@ -13,9 +13,15 @@
       font-size: 1.5rem;
       color: #333;
       margin-bottom: 1rem;
-      border-bottom: 1px solid var(--Color, #0d286e5e);
+      border-bottom: 2px solid var(--Color, #0d286e5e);
       padding-bottom: 0.5rem;
+      padding-right: 1rem;
+      &:hover {
+        border-bottom: 2px solid var(--Color, #7fbe41);
+        transition: width 0.2s ease-in-out;
+      }
     }
+
     .infoBoxContainer {
       display: flex;
       align-items: center;
