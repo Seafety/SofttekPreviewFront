@@ -3,6 +3,8 @@ import DashSection from "../../../Components/Templates/DashSectionTemplate";
 import TableForecast from "../../../Components/Organisms/TableForecast";
 import styles from "../../../Components/Templates/ForecastTemplate/index.module.scss"
 import { chartOptions, custoOptions, Bar } from "../../../Components/Organisms/ChartOptions"
+import ResourceUtilization from "../../../Components/Organisms/ResourceUtilization/index.jsx";
+import Calendar from "../../../Components/Organisms/Calendar";
 
 const Forecast= () => {
   const data = {
@@ -85,6 +87,147 @@ const Forecast= () => {
     { icon: 'estagiario', name: 'Estagiário', lastQuarter: '79', futureProjection: '3.75%', status: 'up2' },
   ];
 
+  const resources = [
+    { name: 'Expert', role: 'expert', occupied: 80 },
+    { name: 'Senior', role: 'senior', occupied: 60 },
+    { name: 'Pleno', role: 'pleno', occupied: 75 },
+    { name: 'Júnior', role: 'junior', occupied: 50 },
+    { name: 'Estagiário', role: 'estagiario', occupied: 40 }
+  ];
+  
+  const monthData = [
+    [
+      { date: 1, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' },
+      { date: 2, status: 'unavailable', role: 'estagiario', tooltip: 'Consultor estagiário indisponível' },
+      { date: 3, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 4, status: 'unavailable', role: 'junior', tooltip: 'Consultor júnior indisponível' },
+      { date: 5, status: 'available', role: '', tooltip: 'Consultor pleno disponível' },
+      { date: 6, status: 'available', role: 'pleno', tooltip: 'Consultor pleno disponível' },
+      { date: 7, status: 'unavailable', role: '', tooltip: 'Consultor sênior indisponível' }
+    ],
+    [
+      { date: 8, status: 'unavailable', role: 'expert', tooltip: 'Consultor expert indisponível' },
+      { date: 9, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 10, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 11, status: 'available', role: 'senior', tooltip: 'Consultor sênior disponível' },
+      { date: 12, status: 'unavailable', role: '', tooltip: 'Consultor pleno indisponível' },
+      { date: 13, status: 'available', role: '', tooltip: 'Consultor pleno disponível' },
+      { date: 14, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' }
+    ],
+    [
+      { date: 15, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 16, status: 'unavailable', role: 'senior', tooltip: 'Consultor sênior indisponível' },
+      { date: 17, status: 'available', role: 'senior', tooltip: 'Consultor sênior disponível' },
+      { date: 18, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 19, status: 'available', role: '', tooltip: 'Consultor expert disponível' },
+      { date: 20, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 21, status: 'unavailable', role: '', tooltip: 'Consultor estagiário indisponível' }
+    ],
+    [
+      { date: 22, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' },
+      { date: 23, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 24, status: 'unavailable', role: '', tooltip: 'Consultor pleno indisponível' },
+      { date: 25, status: 'available', role: '', tooltip: 'Consultor sênior disponível' },
+      { date: 26, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 27, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 28, status: 'available', role: 'pleno', tooltip: 'Consultor pleno disponível' }
+    ],
+    [
+      { date: 29, status: 'available', role: 't', tooltip: 'Consultor expert disponível' },
+      { date: 30, status: 'unavailable', role: '', tooltip: 'Consultor sênior indisponível' },
+      { date: 31, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' }
+    ]
+  ];
+  
+  const month2Data = [
+    [
+      { date: 1, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' },
+      { date: 2, status: 'unavailable', role: 'estagiario', tooltip: 'Consultor estagiário indisponível' },
+      { date: 3, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 4, status: 'unavailable', role: 'junior', tooltip: 'Consultor júnior indisponível' },
+      { date: 5, status: 'available', role: '', tooltip: 'Consultor pleno disponível' },
+      { date: 6, status: 'available', role: 'pleno', tooltip: 'Consultor pleno disponível' },
+      { date: 7, status: 'unavailable', role: '', tooltip: 'Consultor sênior indisponível' }
+    ],
+    [
+      { date: 8, status: 'unavailable', role: 'expert', tooltip: 'Consultor expert indisponível' },
+      { date: 9, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 10, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 11, status: 'available', role: 'senior', tooltip: 'Consultor sênior disponível' },
+      { date: 12, status: 'unavailable', role: '', tooltip: 'Consultor pleno indisponível' },
+      { date: 13, status: 'available', role: '', tooltip: 'Consultor pleno disponível' },
+      { date: 14, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' }
+    ],
+    [
+      { date: 15, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 16, status: 'unavailable', role: 'senior', tooltip: 'Consultor sênior indisponível' },
+      { date: 17, status: 'available', role: 'senior', tooltip: 'Consultor sênior disponível' },
+      { date: 18, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 19, status: 'available', role: '', tooltip: 'Consultor expert disponível' },
+      { date: 20, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 21, status: 'unavailable', role: '', tooltip: 'Consultor estagiário indisponível' }
+    ],
+    [
+      { date: 22, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' },
+      { date: 23, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 24, status: 'unavailable', role: '', tooltip: 'Consultor pleno indisponível' },
+      { date: 25, status: 'available', role: '', tooltip: 'Consultor sênior disponível' },
+      { date: 26, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 27, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 28, status: 'available', role: 'pleno', tooltip: 'Consultor pleno disponível' }
+    ],
+    [
+      { date: 29, status: 'available', role: 't', tooltip: 'Consultor expert disponível' },
+      { date: 30, status: 'unavailable', role: '', tooltip: 'Consultor sênior indisponível' },
+      { date: 31, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' }
+    ]
+  ];
+  
+  const month3Data = [
+    [
+      { date: 1, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' },
+      { date: 2, status: 'unavailable', role: 'estagiario', tooltip: 'Consultor estagiário indisponível' },
+      { date: 3, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 4, status: 'unavailable', role: 'junior', tooltip: 'Consultor júnior indisponível' },
+      { date: 5, status: 'available', role: '', tooltip: 'Consultor pleno disponível' },
+      { date: 6, status: 'available', role: 'pleno', tooltip: 'Consultor pleno disponível' },
+      { date: 7, status: 'unavailable', role: '', tooltip: 'Consultor sênior indisponível' }
+    ],
+    [
+      { date: 8, status: 'unavailable', role: 'expert', tooltip: 'Consultor expert indisponível' },
+      { date: 9, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 10, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 11, status: 'available', role: 'senior', tooltip: 'Consultor sênior disponível' },
+      { date: 12, status: 'unavailable', role: '', tooltip: 'Consultor pleno indisponível' },
+      { date: 13, status: 'available', role: '', tooltip: 'Consultor pleno disponível' },
+      { date: 14, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' }
+    ],
+    [
+      { date: 15, status: 'available', role: '', tooltip: 'Consultor júnior disponível' },
+      { date: 16, status: 'unavailable', role: 'senior', tooltip: 'Consultor sênior indisponível' },
+      { date: 17, status: 'available', role: 'senior', tooltip: 'Consultor sênior disponível' },
+      { date: 18, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 19, status: 'available', role: '', tooltip: 'Consultor expert disponível' },
+      { date: 20, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 21, status: 'unavailable', role: '', tooltip: 'Consultor estagiário indisponível' }
+    ],
+    [
+      { date: 22, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' },
+      { date: 23, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 24, status: 'unavailable', role: '', tooltip: 'Consultor pleno indisponível' },
+      { date: 25, status: 'available', role: '', tooltip: 'Consultor sênior disponível' },
+      { date: 26, status: 'available', role: 'expert', tooltip: 'Consultor expert disponível' },
+      { date: 27, status: 'unavailable', role: '', tooltip: 'Consultor júnior indisponível' },
+      { date: 28, status: 'available', role: 'pleno', tooltip: 'Consultor pleno disponível' }
+    ],
+    [
+      { date: 29, status: 'available', role: 't', tooltip: 'Consultor expert disponível' },
+      { date: 30, status: 'unavailable', role: '', tooltip: 'Consultor sênior indisponível' },
+      { date: 31, status: 'available', role: 'estagiario', tooltip: 'Consultor estagiário disponível' }
+    ]
+  ];
+  
+
   return (
     <>
       
@@ -111,6 +254,31 @@ const Forecast= () => {
           <TableForecast data={consultoresData1}  />
         </DashSection>
       </div>
+
+      <div className={styles.dashSectionSmall}>
+        <DashSection title="Utilização de recursos">
+          <ResourceUtilization resources={resources}/>
+        </DashSection>
+      </div>
+
+      <div className={styles.dashSectionSmall}>
+        <DashSection title="Calendario">
+          <Calendar monthData={monthData}/>
+        </DashSection>
+      </div>
+
+      <div className={styles.dashSectionSmall}>
+        <DashSection title="Calendario">
+          <Calendar monthData={month2Data}/>
+        </DashSection>
+      </div>
+
+      <div className={styles.dashSectionSmall}>
+        <DashSection title="Calendario">
+          <Calendar monthData={month3Data}/>
+        </DashSection>
+      </div>
+
 
       
     </>

@@ -19,8 +19,16 @@ ChartJS.register(
 
 const chartOptions = {
   scales: {
-    x: { stacked: true },
-    y: { stacked: true },
+    x: { stacked: true,
+        ticks: {
+            autoSkip: false,
+            maxRotation: 90,
+            minRotation: 45,
+          },
+    },
+    y: { stacked: true 
+        
+    },
     "y-axis-2": { type: "linear", position: "right" }
   }
 };

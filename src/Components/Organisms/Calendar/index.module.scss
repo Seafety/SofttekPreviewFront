@@ -1,0 +1,30 @@
+.calendar {
+    margin: 20px;
+  
+    .week {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5px; // Espaço entre semanas
+  
+      .day {
+        width: 2.5rem; // Ajuste o tamanho conforme necessário
+        height: 2.5rem; // Ajuste o tamanho conforme necessário
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2.5rem; // Para centralizar o texto verticalmente
+        color: #000; // Cor do texto
+  
+        &.available {
+          background-color: #F0F0F0; // Cor padrão para disponível
+        }
+  
+        &.unavailable {
+          background-color: #FF0000; // Cor padrão para indisponível
+        }
+      }
+    }
+  }
+  
