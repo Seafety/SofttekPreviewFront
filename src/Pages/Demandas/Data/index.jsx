@@ -9,6 +9,7 @@ import ComplexChart from "../../../Components/Organisms/ComplexChart";
 import ConclusionChart from "../../../Components/Organisms/ConclusionChart";
 
 const Data = () => {
+
   const table1Headers = ["ID", "Nome", "Módulo", "Senioridade"];
   const table1Data = [
     ["DFLD", "Daniel Ferreira", "Qualidade", "Senior"],
@@ -34,11 +35,14 @@ const Data = () => {
   ];
 
   const formattedTable2Data = table2Data.map((row) => [
+
     row[0],
     row[1],
     row[2],
     row[3],
+
     <Status status={row[4]} />,
+
   ]);
 
   const chamados = [
@@ -104,6 +108,7 @@ const Data = () => {
       department: "Vendas",
       hours: "2,8",
       status: "up",
+
     },
   ];
 
@@ -116,6 +121,7 @@ const Data = () => {
   return (
     <>
       <div className={styles.dashSectionSmall}>
+
         <DashSection title="Consultores disponíveis">
           <Table headers={table1Headers} data={table1Data} />
         </DashSection>
@@ -143,6 +149,7 @@ const Data = () => {
       <div className={styles.dashSectionLarge}>
         <ComplexChart />
       </div>
+
     </>
   );
 };
