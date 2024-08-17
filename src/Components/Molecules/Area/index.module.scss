@@ -34,15 +34,13 @@
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
     overflow: hidden;
-
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     &.expanded {
       max-height: 1000px;
       opacity: 1;
     }
-
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 
     .chartContainer {
       width: 100%;
@@ -80,6 +78,36 @@
           height: 100%;
           border-radius: 5px;
         }
+      }
+    }
+  }
+
+  // Responsividade
+  @media screen and (min-width: 1400px) and (max-width: 1900px) {
+    .areaContent .dataContent .indicators {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0.5rem;
+
+    .areaHeader {
+      .areaNome {
+        font-size: 1rem;
+      }
+    }
+
+    .areaContent {
+      flex-direction: column;
+
+      .chartContainer {
+        width: 100%;
+      }
+
+      .dataContent {
+        flex-direction: column;
+        gap: 0.8rem;
       }
     }
   }
