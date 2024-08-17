@@ -20,23 +20,32 @@ const Calendar = ({ monthData }) => {
       }
     };
   
+    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
     return (
-      <div className={styles.calendar}>
-        {monthData.map((week, weekIndex) => (
-          <div key={weekIndex} className={styles.week}>
-            {week.map((day, dayIndex) => (
-              <div 
-                key={dayIndex}
-                className={`${styles.day} ${styles[day.status]}`}
-                style={{ backgroundColor: getColor(day.role) }}
-                title={day.tooltip}
-              >
-                {day.date}
-              </div>
+        <div className={styles.calendar}>
+            <div className={styles.weekDays}>
+                {weekDays.map((day, index) => (
+                    <div key={index} className={styles.weekDay}>
+                        {day}
+                    </div>
+                ))}
+            </div>
+            {monthData.map((week, weekIndex) => (
+                <div key={weekIndex} className={styles.week}>
+                    {week.map((day, dayIndex) => (
+                        <div
+                            key={dayIndex}
+                            className={`${styles.day} ${styles[day.status]}`}
+                            style={{ backgroundColor: getColor(day.role) }}
+                            title={day.tooltip}
+                        >
+                            {day.date}
+                        </div>
+                    ))}
+                </div>
             ))}
-          </div>
-        ))}
-      </div>
+        </div>
     );
   };
   

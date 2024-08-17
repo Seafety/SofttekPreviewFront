@@ -5,6 +5,7 @@ import styles from "../../../Components/Templates/ForecastTemplate/index.module.
 import { chartOptions, custoOptions, Bar } from "../../../Components/Organisms/ChartOptions"
 import ResourceUtilization from "../../../Components/Organisms/ResourceUtilization/index.jsx";
 import Calendar from "../../../Components/Organisms/Calendar";
+import RankingTable from "../../../Components/Organisms/TableRanking/index.jsx";
 
 const Forecast= () => {
   const data = {
@@ -227,6 +228,13 @@ const Forecast= () => {
     ]
   ];
   
+  const rankingData = [
+    { name: 'MM', deviation: 3752 },
+    { name: 'FI', deviation: 2815 },
+    { name: 'SD', deviation: 1815 },
+    { name: 'SRM', deviation: 1105 },
+    { name: 'QM', deviation: 605 },
+  ];
 
   return (
     <>
@@ -256,31 +264,26 @@ const Forecast= () => {
       </div>
 
       <div className={styles.dashSectionSmall}>
+        <DashSection title="Análise de desvios">
+          <RankingTable data={rankingData}/>
+        </DashSection>
+      </div>
+
+      <div className={styles.dashSectionSmall}>
         <DashSection title="Utilização de recursos">
           <ResourceUtilization resources={resources}/>
         </DashSection>
       </div>
 
-      <div className={styles.dashSectionSmall}>
-        <DashSection title="Calendario">
-          <Calendar monthData={monthData}/>
-        </DashSection>
-      </div>
-
-      <div className={styles.dashSectionSmall}>
-        <DashSection title="Calendario">
-          <Calendar monthData={month2Data}/>
-        </DashSection>
-      </div>
-
-      <div className={styles.dashSectionSmall}>
-        <DashSection title="Calendario">
-          <Calendar monthData={month3Data}/>
-        </DashSection>
-      </div>
-
-
       
+      <DashSection title="Calendario">
+        <div className={styles.dashCalendar}>
+          <Calendar monthData={monthData}/>
+          <Calendar monthData={month2Data}/>
+          <Calendar monthData={month3Data}/>
+      </div></DashSection>
+      
+   
     </>
   );
 };

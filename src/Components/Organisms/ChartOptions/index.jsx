@@ -7,6 +7,7 @@ import {
   LinearScale,
   LineElement,
   PointElement,
+  
 } from "chart.js";
 
 ChartJS.register(
@@ -96,5 +97,6 @@ const custoOptions = {
     }
   }
 };
+
 
 export { chartOptions, custoOptions, Bar };
