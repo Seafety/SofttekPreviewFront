@@ -74,8 +74,8 @@ const Area = ({
   };
 
   return (
-    <div className={styles.areaContainer} onClick={toggleExpand}>
-      <div className={styles.areaHeader}>
+    <div className={styles.areaContainer}>
+      <div className={styles.areaHeader} onClick={toggleExpand}>
         <div className={styles.areaNome}>
           <span
             className={`${styles.arrowIcon} ${
@@ -83,7 +83,7 @@ const Area = ({
             }`}
           >
             ▼
-          </span>{" "}
+          </span>
           {nome}
         </div>
         <Status status={status} />
