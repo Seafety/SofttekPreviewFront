@@ -83,6 +83,7 @@ const ComplexChart = () => {
     <DashSection title="Tickets por complexidade">
       <Bar data={chartData} options={options} />
     </DashSection>
+
   );
 };
 
