@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./index.module.scss";
-import DashSection from "../../Templates/DashSectionTemplate";
 
 const Table = ({ headers, data }) => {
   return (
