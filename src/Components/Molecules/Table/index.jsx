@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./index.module.scss";
 
 const Table = ({ headers, data }) => {
@@ -37,6 +38,13 @@ const Table = ({ headers, data }) => {
       </table>
     </div>
   );
+};
+
+Table.propTypes = {
+  headers: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
+  ).isRequired,
 };
 
 export default Table;

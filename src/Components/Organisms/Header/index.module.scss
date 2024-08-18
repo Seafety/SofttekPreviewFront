@@ -48,7 +48,6 @@
     }
   }
 
-  // Responsividade para telas maiores
   @media (max-width: 1440px) {
     padding: 0.5rem 5em;
     .nav {
@@ -64,7 +63,6 @@
     }
   }
 
-  // Responsividade para tablets
   @media (max-width: 1024px) {
     padding: 0.5rem 2em;
 
@@ -79,7 +77,6 @@
     }
   }
 
-  // Responsividade para dispositivos móveis
   @media (max-width: 768px) {
     padding: 0.5rem 1em;
     flex-direction: column;
