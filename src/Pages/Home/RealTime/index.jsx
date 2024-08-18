@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import FinanceSection from "../../../Components/Organisms/FinanceSection";
 import ContractsSection from "../../../Components/Organisms/ContractsSection";
@@ -23,20 +23,31 @@ const COMPONENTS = {
 };
 
 const RealTime = () => {
-  const [leftColumn, setLeftColumn] = useState([
-    "StatusArea",
-    "FinanceSection",
-    "ContractsSection",
-  ]);
+  const [leftColumn, setLeftColumn] = useState(() => {
+    const savedLeftColumn = localStorage.getItem("leftColumn");
+    return savedLeftColumn
+      ? JSON.parse(savedLeftColumn)
+      : ["StatusArea", "FinanceSection", "ContractsSection"];
+  });
 
-  const [rightColumn, setRightColumn] = useState([
-    "OpenTickets",
-    "ConsultoresDisponiveis",
-    "ChamadosConsultor",
-    "ConclusionChart",
-    "CriticidadeBar",
-    "ComplexChart",
-  ]);
+  const [rightColumn, setRightColumn] = useState(() => {
+    const savedRightColumn = localStorage.getItem("rightColumn");
+    return savedRightColumn
+      ? JSON.parse(savedRightColumn)
+      : [
+          "OpenTickets",
+          "ConsultoresDisponiveis",
+          "ChamadosConsultor",
+          "ConclusionChart",
+          "CriticidadeBar",
+          "ComplexChart",
+        ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("leftColumn", JSON.stringify(leftColumn));
+    localStorage.setItem("rightColumn", JSON.stringify(rightColumn));
+  }, [leftColumn, rightColumn]);
 
   const handleDragStart = (e, index, column) => {
     e.dataTransfer.setData("draggedIndex", index);
