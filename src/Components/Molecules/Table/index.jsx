@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './index.module.scss';
+import React from "react";
+import styles from "./index.module.scss";
+import DashSection from "../../Templates/DashSectionTemplate";
 
 const Table = ({ headers, data }) => {
   return (
@@ -24,8 +25,8 @@ const Table = ({ headers, data }) => {
                     cellIndex === 0
                       ? styles.lightGrayText
                       : cellIndex === 1
-                      ? styles.boldText 
-                      : ''
+                      ? styles.boldText
+                      : ""
                   }`}
                 >
                   {cell}
