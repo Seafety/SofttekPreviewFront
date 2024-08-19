@@ -355,8 +355,8 @@
       },
       "horas_gestao": 50,
       "baseline_consumido": 150,
-      "inicio_contrato": "2024-10-01",
-      "fim_contrato": "2025-09-30",
+      "inicio_contrato": "2024-06-01",
+      "fim_contrato": "2025-07-30",
       "status": "Anormal",
       "ativo": true
     },
@@ -391,8 +391,8 @@
       },
       "horas_gestao": 60,
       "baseline_consumido": 170,
-      "inicio_contrato": "2024-11-01",
-      "fim_contrato": "2025-10-31",
+      "inicio_contrato": "2024-02-01",
+      "fim_contrato": "2025-01-31",
       "status": "Normal",
       "ativo": true
     },
@@ -427,8 +427,8 @@
       },
       "horas_gestao": 40,
       "baseline_consumido": 110,
-      "inicio_contrato": "2024-12-01",
-      "fim_contrato": "2025-11-30",
+      "inicio_contrato": "2024-02-01",
+      "fim_contrato": "2025-01-30",
       "status": "Normal",
       "ativo": true
     },
@@ -715,8 +715,8 @@
       },
       "horas_gestao": 70,
       "baseline_consumido": 210,
-      "inicio_contrato": "2024-08-01",
-      "fim_contrato": "2025-07-31",
+      "inicio_contrato": "2024-05-01",
+      "fim_contrato": "2025-04-31",
       "status": "Crítico",
       "ativo": true
     }

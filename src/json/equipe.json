@@ -3,10 +3,13 @@
     {
       "is": "IS001",
       "nome": "John Doe",
-      "codigo_at": "AT001",
+      "codigo_at": "PLE001",
       "descricao_at": "Atendimento de Incidente",
       "senioridade": "Pleno",
-      "especialidade": ["SAP MM", "SAP SD"],
+      "especialidade": [
+        "SAP MM",
+        "SAP SD"
+      ],
       "ausencia_ini": "2024-07-01",
       "ausencia_fin": "2024-07-15",
       "ausencia_tipo": "Férias"
@@ -14,10 +17,13 @@
     {
       "is": "IS002",
       "nome": "Jane Smith",
-      "codigo_at": "AT002",
+      "codigo_at": "SEN001",
       "descricao_at": "Implementação de Mudança",
       "senioridade": "Senior",
-      "especialidade": ["SAP FICO", "SAP HR"],
+      "especialidade": [
+        "SAP FICO",
+        "SAP HR"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -25,10 +31,13 @@
     {
       "is": "IS003",
       "nome": "Alice Brown",
-      "codigo_at": "AT003",
+      "codigo_at": "EXP001",
       "descricao_at": "Suporte AMS",
       "senioridade": "Expert",
-      "especialidade": ["SAP HANA", "SAP BW"],
+      "especialidade": [
+        "SAP HANA",
+        "SAP BW"
+      ],
       "ausencia_ini": "2024-09-10",
       "ausencia_fin": "2024-09-20",
       "ausencia_tipo": "Treinamento"
@@ -36,10 +45,13 @@
     {
       "is": "IS004",
       "nome": "Bob Green",
-      "codigo_at": "AT004",
+      "codigo_at": "JUN001",
       "descricao_at": "Manutenção de Sistema",
       "senioridade": "Junior",
-      "especialidade": ["SAP PP", "SAP QM"],
+      "especialidade": [
+        "SAP PP",
+        "SAP QM"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -47,10 +59,13 @@
     {
       "is": "IS005",
       "nome": "Emily White",
-      "codigo_at": "AT005",
+      "codigo_at": "PLE002",
       "descricao_at": "Implementação de Novos Módulos",
       "senioridade": "Pleno",
-      "especialidade": ["SAP SD", "SAP CRM"],
+      "especialidade": [
+        "SAP SD",
+        "SAP CRM"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -58,10 +73,13 @@
     {
       "is": "IS006",
       "nome": "Michael Black",
-      "codigo_at": "AT006",
+      "codigo_at": "SEN002",
       "descricao_at": "Gestão de Projetos",
       "senioridade": "Senior",
-      "especialidade": ["SAP PS", "SAP FI"],
+      "especialidade": [
+        "SAP PS",
+        "SAP FI"
+      ],
       "ausencia_ini": "2025-01-05",
       "ausencia_fin": "2025-01-15",
       "ausencia_tipo": "Férias"
@@ -69,10 +87,13 @@
     {
       "is": "IS007",
       "nome": "Olivia Blue",
-      "codigo_at": "AT007",
+      "codigo_at": "EXP002",
       "descricao_at": "Consultoria Técnica",
       "senioridade": "Expert",
-      "especialidade": ["SAP ABAP", "SAP HANA"],
+      "especialidade": [
+        "SAP ABAP",
+        "SAP HANA"
+      ],
       "ausencia_ini": "2024-12-10",
       "ausencia_fin": "2024-12-24",
       "ausencia_tipo": "Treinamento"
@@ -80,10 +101,13 @@
     {
       "is": "IS008",
       "nome": "William Purple",
-      "codigo_at": "AT008",
+      "codigo_at": "JUN002",
       "descricao_at": "Desenvolvimento de Software",
       "senioridade": "Junior",
-      "especialidade": ["SAP UI5", "SAP Fiori"],
+      "especialidade": [
+        "SAP UI5",
+        "SAP Fiori"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -91,10 +115,13 @@
     {
       "is": "IS009",
       "nome": "Sophia Grey",
-      "codigo_at": "AT009",
+      "codigo_at": "PLE003",
       "descricao_at": "Análise de Negócios",
       "senioridade": "Pleno",
-      "especialidade": ["SAP BI", "SAP BW"],
+      "especialidade": [
+        "SAP BI",
+        "SAP BW"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -102,10 +129,13 @@
     {
       "is": "IS010",
       "nome": "James White",
-      "codigo_at": "AT010",
+      "codigo_at": "SEN003",
       "descricao_at": "Suporte Técnico",
       "senioridade": "Senior",
-      "especialidade": ["SAP Basis", "SAP Security"],
+      "especialidade": [
+        "SAP Basis",
+        "SAP Security"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -113,10 +143,13 @@
     {
       "is": "IS011",
       "nome": "Isabella Green",
-      "codigo_at": "AT011",
+      "codigo_at": "JUN003",
       "descricao_at": "Desenvolvimento ABAP",
       "senioridade": "Junior",
-      "especialidade": ["SAP ABAP", "SAP Fiori"],
+      "especialidade": [
+        "SAP ABAP",
+        "SAP Fiori"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -124,10 +157,13 @@
     {
       "is": "IS012",
       "nome": "Henry Blue",
-      "codigo_at": "AT012",
+      "codigo_at": "SEN004",
       "descricao_at": "Gestão de Mudanças",
       "senioridade": "Senior",
-      "especialidade": ["SAP ChaRM", "SAP SolMan"],
+      "especialidade": [
+        "SAP ChaRM",
+        "SAP SolMan"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -135,10 +171,13 @@
     {
       "is": "IS013",
       "nome": "Mia Brown",
-      "codigo_at": "AT013",
+      "codigo_at": "PLE004",
       "descricao_at": "Implementação de Módulos Financeiros",
       "senioridade": "Pleno",
-      "especialidade": ["SAP FI", "SAP CO"],
+      "especialidade": [
+        "SAP FI",
+        "SAP CO"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -146,10 +185,13 @@
     {
       "is": "IS014",
       "nome": "Liam Purple",
-      "codigo_at": "AT014",
+      "codigo_at": "EXP003",
       "descricao_at": "Consultoria em Recursos Humanos",
       "senioridade": "Expert",
-      "especialidade": ["SAP HR", "SAP SuccessFactors"],
+      "especialidade": [
+        "SAP HR",
+        "SAP SuccessFactors"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -157,10 +199,13 @@
     {
       "is": "IS015",
       "nome": "Ava Yellow",
-      "codigo_at": "AT015",
+      "codigo_at": "PLE005",
       "descricao_at": "Suporte AMS Global",
       "senioridade": "Pleno",
-      "especialidade": ["SAP MM", "SAP SD"],
+      "especialidade": [
+        "SAP MM",
+        "SAP SD"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -168,10 +213,13 @@
     {
       "is": "IS016",
       "nome": "Lucas Red",
-      "codigo_at": "AT016",
+      "codigo_at": "EXP004",
       "descricao_at": "Arquitetura de Sistemas",
       "senioridade": "Expert",
-      "especialidade": ["SAP HANA", "SAP S/4HANA"],
+      "especialidade": [
+        "SAP HANA",
+        "SAP S/4HANA"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -179,10 +227,13 @@
     {
       "is": "IS017",
       "nome": "Charlotte Black",
-      "codigo_at": "AT017",
+      "codigo_at": "SEN005",
       "descricao_at": "Gestão de Serviços",
       "senioridade": "Senior",
-      "especialidade": ["SAP ITSM", "SAP SolMan"],
+      "especialidade": [
+        "SAP ITSM",
+        "SAP SolMan"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -190,10 +241,13 @@
     {
       "is": "IS018",
       "nome": "Elijah Grey",
-      "codigo_at": "AT018",
+      "codigo_at": "JUN004",
       "descricao_at": "Desenvolvimento Web",
       "senioridade": "Junior",
-      "especialidade": ["SAP UI5", "SAP Fiori"],
+      "especialidade": [
+        "SAP UI5",
+        "SAP Fiori"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -201,10 +255,13 @@
     {
       "is": "IS019",
       "nome": "Ella Brown",
-      "codigo_at": "AT019",
+      "codigo_at": "SEN006",
       "descricao_at": "Gestão de Projetos",
       "senioridade": "Senior",
-      "especialidade": ["SAP PS", "SAP PPM"],
+      "especialidade": [
+        "SAP PS",
+        "SAP PPM"
+      ],
       "ausencia_ini": "2025-03-10",
       "ausencia_fin": "2025-03-20",
       "ausencia_tipo": "Férias"
@@ -212,10 +269,13 @@
     {
       "is": "IS020",
       "nome": "Mason Green",
-      "codigo_at": "AT020",
+      "codigo_at": "PLE006",
       "descricao_at": "Consultoria Técnica",
       "senioridade": "Pleno",
-      "especialidade": ["SAP MM", "SAP SD"],
+      "especialidade": [
+        "SAP MM",
+        "SAP SD"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -223,10 +283,13 @@
     {
       "is": "IS021",
       "nome": "Ethan Blue",
-      "codigo_at": "AT021",
+      "codigo_at": "JUN005",
       "descricao_at": "Desenvolvimento de Software",
       "senioridade": "Junior",
-      "especialidade": ["SAP UI5", "SAP Fiori"],
+      "especialidade": [
+        "SAP UI5",
+        "SAP Fiori"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -234,10 +297,13 @@
     {
       "is": "IS022",
       "nome": "Harper White",
-      "codigo_at": "AT022",
+      "codigo_at": "SEN007",
       "descricao_at": "Suporte Técnico",
       "senioridade": "Senior",
-      "especialidade": ["SAP Basis", "SAP Security"],
+      "especialidade": [
+        "SAP Basis",
+        "SAP Security"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -245,10 +311,13 @@
     {
       "is": "IS023",
       "nome": "Amelia Red",
-      "codigo_at": "AT023",
+      "codigo_at": "PLE007",
       "descricao_at": "Análise de Negócios",
       "senioridade": "Pleno",
-      "especialidade": ["SAP BI", "SAP BW"],
+      "especialidade": [
+        "SAP BI",
+        "SAP BW"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -256,10 +325,13 @@
     {
       "is": "IS024",
       "nome": "Lucas Yellow",
-      "codigo_at": "AT024",
+      "codigo_at": "EXP005",
       "descricao_at": "Gestão de Mudanças",
       "senioridade": "Expert",
-      "especialidade": ["SAP ChaRM", "SAP SolMan"],
+      "especialidade": [
+        "SAP ChaRM",
+        "SAP SolMan"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
@@ -267,10 +339,52 @@
     {
       "is": "IS025",
       "nome": "Charlotte Grey",
-      "codigo_at": "AT025",
+      "codigo_at": "JUN006",
       "descricao_at": "Desenvolvimento ABAP",
       "senioridade": "Junior",
-      "especialidade": ["SAP ABAP", "SAP Fiori"],
+      "especialidade": [
+        "SAP ABAP",
+        "SAP Fiori"
+      ],
+      "ausencia_ini": "",
+      "ausencia_fin": "",
+      "ausencia_tipo": ""
+    },
+    {
+      "is": "IS026",
+      "nome": "Noah Green",
+      "codigo_at": "EST001",
+      "descricao_at": "Suporte Técnico Básico",
+      "senioridade": "Estagiário",
+      "especialidade": [
+        "SAP Basis"
+      ],
+      "ausencia_ini": "",
+      "ausencia_fin": "",
+      "ausencia_tipo": ""
+    },
+    {
+      "is": "IS027",
+      "nome": "Emma Brown",
+      "codigo_at": "EST002",
+      "descricao_at": "Apoio Administrativo",
+      "senioridade": "Estagiário",
+      "especialidade": [
+        "SAP MM"
+      ],
+      "ausencia_ini": "",
+      "ausencia_fin": "",
+      "ausencia_tipo": ""
+    },
+    {
+      "is": "IS028",
+      "nome": "Aiden Grey",
+      "codigo_at": "EST003",
+      "descricao_at": "Desenvolvimento ABAP",
+      "senioridade": "Estagiário",
+      "especialidade": [
+        "SAP ABAP"
+      ],
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
