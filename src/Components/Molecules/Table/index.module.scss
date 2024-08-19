@@ -1,10 +1,10 @@
 .tableContainer {
-  width: auto;
+  width: 100%;
   overflow-x: auto;
 }
 
 .table {
-  width: auto;
+  width: 100%;
   border-collapse: collapse;
   text-align: left;
 }
@@ -33,6 +33,7 @@
 
 .lightGrayText {
   color: #9d9d9d;
+  text-align: center;
 }
 
 .boldText {
