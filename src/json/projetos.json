@@ -1,0 +1,724 @@
+{
+  "contratos": [
+    {
+      "projeto": "PROJ001",
+      "descricao": "Projeto de Implementação SAP",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP MM",
+        "SAP SD"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 160,
+      "valor_contrato": 500000.00,
+      "piramide_vendas": {
+        "expert": 15.0,
+        "senior": 25.0,
+        "pleno": 30.0,
+        "junior": 20.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 150.00,
+        "senior": 120.00,
+        "pleno": 90.00,
+        "junior": 60.00,
+        "estagiario": 30.00,
+        "gestao": 50.00
+      },
+      "horas_gestao": 40,
+      "baseline_consumido": 40,
+      "inicio_contrato": "2024-01-01",
+      "fim_contrato": "2024-12-31",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ002",
+      "descricao": "Suporte AMS Global",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP FICO",
+        "SAP HR"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Mudança"
+      ],
+      "baseline": 200,
+      "valor_contrato": 750000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 25.0,
+        "junior": 15.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 35.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 190,
+      "inicio_contrato": "2023-02-01",
+      "fim_contrato": "2024-01-31",
+      "status": "",
+      "ativo": false
+    },
+    {
+      "projeto": "PROJ003",
+      "descricao": "Implementação de SAP HANA",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP HANA",
+        "SAP BW"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Melhoria"
+      ],
+      "baseline": 180,
+      "valor_contrato": 600000.00,
+      "piramide_vendas": {
+        "expert": 25.0,
+        "senior": 35.0,
+        "pleno": 20.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 170.00,
+        "senior": 140.00,
+        "pleno": 110.00,
+        "junior": 80.00,
+        "estagiario": 40.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 60,
+      "baseline_consumido": 170,
+      "inicio_contrato": "2023-03-01",
+      "fim_contrato": "2024-02-29",
+      "status": "",
+      "ativo": false
+    },
+    {
+      "projeto": "PROJ004",
+      "descricao": "Suporte Técnico SAP Basis",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP Basis",
+        "SAP Security"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 220,
+      "valor_contrato": 800000.00,
+      "piramide_vendas": {
+        "expert": 30.0,
+        "senior": 40.0,
+        "pleno": 20.0,
+        "junior": 5.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 180.00,
+        "senior": 150.00,
+        "pleno": 120.00,
+        "junior": 90.00,
+        "estagiario": 50.00,
+        "gestao": 70.00
+      },
+      "horas_gestao": 70,
+      "baseline_consumido": 200,
+      "inicio_contrato": "2024-04-01",
+      "fim_contrato": "2025-03-31",
+      "status": "Crítico",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ005",
+      "descricao": "Projeto de Implementação SAP Ariba",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP Ariba",
+        "SAP MM"
+      ],
+      "tipo_demanda": [
+        "Mudança",
+        "Melhoria"
+      ],
+      "baseline": 140,
+      "valor_contrato": 450000.00,
+      "piramide_vendas": {
+        "expert": 10.0,
+        "senior": 20.0,
+        "pleno": 35.0,
+        "junior": 25.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 30,
+      "baseline_consumido": 110,
+      "inicio_contrato": "2024-05-01",
+      "fim_contrato": "2025-04-30",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ006",
+      "descricao": "Suporte AMS Financeiro",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP FICO",
+        "SAP CO"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Mudança"
+      ],
+      "baseline": 200,
+      "valor_contrato": 700000.00,
+      "piramide_vendas": {
+        "expert": 25.0,
+        "senior": 30.0,
+        "pleno": 25.0,
+        "junior": 15.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 170.00,
+        "senior": 140.00,
+        "pleno": 110.00,
+        "junior": 80.00,
+        "estagiario": 50.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 60,
+      "baseline_consumido": 180,
+      "inicio_contrato": "2024-06-01",
+      "fim_contrato": "2025-05-31",
+      "status": "Anormal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ007",
+      "descricao": "Implementação de SAP SuccessFactors",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP HR",
+        "SAP SuccessFactors"
+      ],
+      "tipo_demanda": [
+        "Melhoria",
+        "Incidente"
+      ],
+      "baseline": 160,
+      "valor_contrato": 550000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 30.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 30,
+      "inicio_contrato": "2024-07-01",
+      "fim_contrato": "2025-06-30",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ008",
+      "descricao": "Suporte Técnico SAP PI",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP PI",
+        "SAP PO"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 180,
+      "valor_contrato": 600000.00,
+      "piramide_vendas": {
+        "expert": 15.0,
+        "senior": 25.0,
+        "pleno": 35.0,
+        "junior": 20.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 150.00,
+        "senior": 120.00,
+        "pleno": 90.00,
+        "junior": 60.00,
+        "estagiario": 30.00,
+        "gestao": 50.00
+      },
+      "horas_gestao": 40,
+      "baseline_consumido": 170,
+      "inicio_contrato": "2024-08-01",
+      "fim_contrato": "2025-07-31",
+      "status": "Crítico",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ009",
+      "descricao": "Projeto de Integração SAP",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP PI",
+        "SAP HANA"
+      ],
+      "tipo_demanda": [
+        "Melhoria",
+        "Mudança"
+      ],
+      "baseline": 140,
+      "valor_contrato": 500000.00,
+      "piramide_vendas": {
+        "expert": 25.0,
+        "senior": 35.0,
+        "pleno": 25.0,
+        "junior": 10.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 170.00,
+        "senior": 140.00,
+        "pleno": 110.00,
+        "junior": 80.00,
+        "estagiario": 50.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 130,
+      "inicio_contrato": "2024-09-01",
+      "fim_contrato": "2025-08-31",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ010",
+      "descricao": "Suporte SAP CRM",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP CRM",
+        "SAP SD"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 160,
+      "valor_contrato": 550000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 30.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 150,
+      "inicio_contrato": "2024-06-01",
+      "fim_contrato": "2025-07-30",
+      "status": "Anormal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ011",
+      "descricao": "Projeto de Implementação SAP SolMan",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP SolMan",
+        "SAP ITSM"
+      ],
+      "tipo_demanda": [
+        "Mudança",
+        "Melhoria"
+      ],
+      "baseline": 200,
+      "valor_contrato": 750000.00,
+      "piramide_vendas": {
+        "expert": 30.0,
+        "senior": 35.0,
+        "pleno": 25.0,
+        "junior": 5.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 180.00,
+        "senior": 150.00,
+        "pleno": 120.00,
+        "junior": 90.00,
+        "estagiario": 60.00,
+        "gestao": 70.00
+      },
+      "horas_gestao": 60,
+      "baseline_consumido": 170,
+      "inicio_contrato": "2024-02-01",
+      "fim_contrato": "2025-01-31",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ012",
+      "descricao": "Projeto de Otimização de Processos SAP",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP MM",
+        "SAP PP"
+      ],
+      "tipo_demanda": [
+        "Melhoria",
+        "Mudança"
+      ],
+      "baseline": 140,
+      "valor_contrato": 450000.00,
+      "piramide_vendas": {
+        "expert": 10.0,
+        "senior": 20.0,
+        "pleno": 35.0,
+        "junior": 25.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 150.00,
+        "senior": 120.00,
+        "pleno": 90.00,
+        "junior": 60.00,
+        "estagiario": 40.00,
+        "gestao": 50.00
+      },
+      "horas_gestao": 40,
+      "baseline_consumido": 110,
+      "inicio_contrato": "2024-02-01",
+      "fim_contrato": "2025-01-30",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ013",
+      "descricao": "Implementação SAP C/4HANA",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP C/4HANA",
+        "SAP CRM"
+      ],
+      "tipo_demanda": [
+        "Mudança",
+        "Melhoria"
+      ],
+      "baseline": 200,
+      "valor_contrato": 800000.00,
+      "piramide_vendas": {
+        "expert": 25.0,
+        "senior": 35.0,
+        "pleno": 25.0,
+        "junior": 10.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 170.00,
+        "senior": 140.00,
+        "pleno": 110.00,
+        "junior": 80.00,
+        "estagiario": 50.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 60,
+      "baseline_consumido": 190,
+      "inicio_contrato": "2024-01-01",
+      "fim_contrato": "2025-01-31",
+      "status": "Anormal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ014",
+      "descricao": "Suporte AMS para SAP HCM",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP HCM",
+        "SAP HR"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 160,
+      "valor_contrato": 550000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 30.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 160,
+      "inicio_contrato": "2023-02-01",
+      "fim_contrato": "2024-01-31",
+      "status": "Crítico",
+      "ativo": false
+    },
+    {
+      "projeto": "PROJ015",
+      "descricao": "Implementação SAP BW/4HANA",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP BW",
+        "SAP HANA"
+      ],
+      "tipo_demanda": [
+        "Melhoria",
+        "Mudança"
+      ],
+      "baseline": 180,
+      "valor_contrato": 650000.00,
+      "piramide_vendas": {
+        "expert": 25.0,
+        "senior": 30.0,
+        "pleno": 25.0,
+        "junior": 15.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 170.00,
+        "senior": 140.00,
+        "pleno": 110.00,
+        "junior": 80.00,
+        "estagiario": 50.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 60,
+      "baseline_consumido": 170,
+      "inicio_contrato": "2024-03-01",
+      "fim_contrato": "2025-02-28",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ016",
+      "descricao": "Suporte Técnico SAP",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP MM",
+        "SAP SD"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 200,
+      "valor_contrato": 700000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 30.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 190,
+      "inicio_contrato": "2023-04-01",
+      "fim_contrato": "2024-03-31",
+      "status": "",
+      "ativo": false
+    },
+    {
+      "projeto": "PROJ017",
+      "descricao": "Implementação SAP TM",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP TM",
+        "SAP LE"
+      ],
+      "tipo_demanda": [
+        "Mudança",
+        "Melhoria"
+      ],
+      "baseline": 140,
+      "valor_contrato": 500000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 30.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 40,
+      "baseline_consumido": 130,
+      "inicio_contrato": "2024-05-01",
+      "fim_contrato": "2025-04-30",
+      "status": "Normal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ018",
+      "descricao": "Suporte AMS para SAP CO",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP CO",
+        "SAP FI"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 160,
+      "valor_contrato": 600000.00,
+      "piramide_vendas": {
+        "expert": 20.0,
+        "senior": 30.0,
+        "pleno": 30.0,
+        "junior": 10.0,
+        "estagiario": 10.0
+      },
+      "custo_venda": {
+        "expert": 160.00,
+        "senior": 130.00,
+        "pleno": 100.00,
+        "junior": 70.00,
+        "estagiario": 40.00,
+        "gestao": 55.00
+      },
+      "horas_gestao": 50,
+      "baseline_consumido": 150,
+      "inicio_contrato": "2024-06-01",
+      "fim_contrato": "2025-05-31",
+      "status": "Anormal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ019",
+      "descricao": "Projeto de Integração SAP",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP PI",
+        "SAP HANA"
+      ],
+      "tipo_demanda": [
+        "Melhoria",
+        "Mudança"
+      ],
+      "baseline": 200,
+      "valor_contrato": 800000.00,
+      "piramide_vendas": {
+        "expert": 25.0,
+        "senior": 35.0,
+        "pleno": 25.0,
+        "junior": 10.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 170.00,
+        "senior": 140.00,
+        "pleno": 110.00,
+        "junior": 80.00,
+        "estagiario": 50.00,
+        "gestao": 60.00
+      },
+      "horas_gestao": 60,
+      "baseline_consumido": 190,
+      "inicio_contrato": "2024-07-01",
+      "fim_contrato": "2025-06-30",
+      "status": "Anormal",
+      "ativo": true
+    },
+    {
+      "projeto": "PROJ020",
+      "descricao": "Suporte SAP S/4HANA",
+      "tipo_contrato": "Baseline Funcional",
+      "modulo": [
+        "SAP S/4HANA",
+        "SAP FICO"
+      ],
+      "tipo_demanda": [
+        "Incidente",
+        "Requisição de Serviço"
+      ],
+      "baseline": 220,
+      "valor_contrato": 900000.00,
+      "piramide_vendas": {
+        "expert": 30.0,
+        "senior": 40.0,
+        "pleno": 20.0,
+        "junior": 5.0,
+        "estagiario": 5.0
+      },
+      "custo_venda": {
+        "expert": 180.00,
+        "senior": 150.00,
+        "pleno": 120.00,
+        "junior": 90.00,
+        "estagiario": 60.00,
+        "gestao": 70.00
+      },
+      "horas_gestao": 70,
+      "baseline_consumido": 210,
+      "inicio_contrato": "2024-05-01",
+      "fim_contrato": "2025-04-31",
+      "status": "Crítico",
+      "ativo": true
+    }
+  ]
+}

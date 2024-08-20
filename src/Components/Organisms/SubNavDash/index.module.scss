@@ -30,7 +30,6 @@
           height: 2px;
           background-color: $active_green;
           transition: width 0.2s ease-in-out;
-          width: 100%;
         }
       }
 
@@ -55,5 +54,13 @@
     top: 0;
     right: 0;
     align-self: flex-end;
+  }
+
+  // Responsividade
+  @media (max-width: 1200px) {
+    &_links {
+      justify-content: start;
+      align-items: start;
+    }
   }
 }

@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './index.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./index.module.scss";
 
 const Table = ({ headers, data }) => {
   return (
@@ -24,8 +25,8 @@ const Table = ({ headers, data }) => {
                     cellIndex === 0
                       ? styles.lightGrayText
                       : cellIndex === 1
-                      ? styles.boldText 
-                      : ''
+                      ? styles.boldText
+                      : ""
                   }`}
                 >
                   {cell}
@@ -37,6 +38,13 @@ const Table = ({ headers, data }) => {
       </table>
     </div>
   );
+};
+
+Table.propTypes = {
+  headers: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
+  ).isRequired,
 };
 
 export default Table;

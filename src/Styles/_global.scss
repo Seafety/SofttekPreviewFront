@@ -13,4 +13,13 @@
   .main-content {
     margin: 2rem 7rem 2rem 7rem;
   }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #0d296e;
+    border-radius: 10px;
+  }
 }

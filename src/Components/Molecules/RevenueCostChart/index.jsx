@@ -12,7 +12,6 @@ import {
   Legend,
 } from "chart.js";
 import PropTypes from "prop-types";
-// Registrar os componentes do Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -28,18 +27,16 @@ const RevenueCostChart = ({ data }) => {
     labels: data.labels,
     datasets: [
       {
-        label: "Faturamento",
-        data: data.revenue,
-        borderColor: "#01E340",
-        backgroundColor: "#01E347",
-        fill: true,
-      },
-      {
         label: "Custo",
         data: data.cost,
         borderColor: "#F00",
         backgroundColor: "#F00",
-        fill: true,
+      },
+      {
+        label: "Faturamento",
+        data: data.revenue,
+        borderColor: "#01E340",
+        backgroundColor: "#01E347",
       },
     ],
   };
@@ -50,10 +47,6 @@ const RevenueCostChart = ({ data }) => {
       legend: {
         position: "top",
       },
-      // title: {
-      //   display: true,
-      //   text: "Faturamento vs. Custo",
-      // },
     },
   };
 
