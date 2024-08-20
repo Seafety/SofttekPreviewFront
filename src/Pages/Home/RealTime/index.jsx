@@ -27,7 +27,7 @@ const RealTime = () => {
     const savedLeftColumn = localStorage.getItem("leftColumn");
     return savedLeftColumn
       ? JSON.parse(savedLeftColumn)
-      : ["StatusArea", "FinanceSection", "ContractsSection"];
+      : ["StatusArea", "FinanceSection", "ContractsSection", "ConclusionChart"];
   });
 
   const [rightColumn, setRightColumn] = useState(() => {
@@ -35,11 +35,10 @@ const RealTime = () => {
     return savedRightColumn
       ? JSON.parse(savedRightColumn)
       : [
+          "CriticidadeBar",
           "OpenTickets",
           "ConsultoresDisponiveis",
           "ChamadosConsultor",
-          "ConclusionChart",
-          "CriticidadeBar",
           "ComplexChart",
         ];
   });
