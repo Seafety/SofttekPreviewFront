@@ -1,30 +1,25 @@
 import React, { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import AreaForcasts from "../../../Components/Organisms/AreaForcasts";
-import StatusArea from "../../../Components/Organisms/StatusArea";
-import FinanceSection from "../../../Components/Organisms/FinanceSection";
-import ContractsSection from "../../../Components/Organisms/ContractsSection";
-
+import FinanceForcasts from "../../../Components/Organisms/FinanceForcasts";
+import ComplexityChartForcasts from "../../../Components/Organisms/ComplexChartForcasts";
 const COMPONENTS = {
   AreaForcasts,
-  StatusArea,
-  FinanceSection,
-  ContractsSection,
+  FinanceForcasts,
+  ComplexityChartForcasts,
 };
 
 const Forecast = () => {
   const [leftColumn, setLeftColumn] = useState(() => {
     const savedLeftColumn = localStorage.getItem("forecastLeftColumn");
-    return savedLeftColumn
-      ? JSON.parse(savedLeftColumn)
-      : ["AreaForcasts", "StatusArea"];
+    return savedLeftColumn ? JSON.parse(savedLeftColumn) : ["AreaForcasts"];
   });
 
   const [rightColumn, setRightColumn] = useState(() => {
     const savedRightColumn = localStorage.getItem("forecastRightColumn");
     return savedRightColumn
       ? JSON.parse(savedRightColumn)
-      : ["FinanceSection", "ContractsSection"];
+      : ["FinanceForcasts", "ComplexityChartForcasts"];
   });
 
   useEffect(() => {

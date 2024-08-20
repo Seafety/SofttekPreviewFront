@@ -308,7 +308,7 @@ const AreaForcasts = () => {
   );
 
   return (
-    <DashSection title="Previsão dos Chamados e Capacidade">
+    <DashSection title="Previsão dos Chamados X Capacidade">
       <div className={styles.scrollContainer}>
         {sortedForecastsData.map((moduleData, index) => (
           <ForcastDxC
