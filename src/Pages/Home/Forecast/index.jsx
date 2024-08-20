@@ -4,17 +4,23 @@ import AreaForcasts from "../../../Components/Organisms/AreaForcasts";
 import FinanceForcasts from "../../../Components/Organisms/FinanceForcasts";
 import ComplexityChartForcasts from "../../../Components/Organisms/ComplexChartForcasts";
 import ConsultorAusenciaForcast from "../../../Components/Organisms/ConsultorAusenciaForcast";
+import ConsultorFeriasSugestao from "../../../Components/Organisms/SugestaoFeriasForcast";
+import ContractsForecastSection from "../../../Components/Organisms/ContractsForcasts";
 const COMPONENTS = {
   AreaForcasts,
   FinanceForcasts,
   ComplexityChartForcasts,
   ConsultorAusenciaForcast,
+  ConsultorFeriasSugestao,
+  ContractsForecastSection,
 };
 
 const Forecast = () => {
   const [leftColumn, setLeftColumn] = useState(() => {
     const savedLeftColumn = localStorage.getItem("forecastLeftColumn");
-    return savedLeftColumn ? JSON.parse(savedLeftColumn) : ["AreaForcasts"];
+    return savedLeftColumn
+      ? JSON.parse(savedLeftColumn)
+      : ["AreaForcasts", "ConsultorAusenciaForcast"];
   });
 
   const [rightColumn, setRightColumn] = useState(() => {
@@ -24,7 +30,8 @@ const Forecast = () => {
       : [
           "FinanceForcasts",
           "ComplexityChartForcasts",
-          "ConsultorAusenciaForcast",
+          "ConsultorFeriasSugestao",
+          "ContractsForecastSection",
         ];
   });
 

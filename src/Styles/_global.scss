@@ -14,13 +14,12 @@
     margin: 2rem 7rem 2rem 7rem;
   }
 
-  .app-container::-webkit-scrollbar {
-    width: 8px;
+  &::-webkit-scrollbar {
+    width: 5px;
   }
 
-  .app-container::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: #0d296e;
     border-radius: 10px;
-    border: 2px solid #f1f1f1;
   }
 }
