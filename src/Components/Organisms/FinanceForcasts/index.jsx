@@ -1,7 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import DashSection from "../../Templates/DashSectionTemplate";
-import styles from "./index.module.scss";
 
 const FinanceForcasts = () => {
   const data = {

@@ -3,10 +3,12 @@ import styles from "./index.module.scss";
 import AreaForcasts from "../../../Components/Organisms/AreaForcasts";
 import FinanceForcasts from "../../../Components/Organisms/FinanceForcasts";
 import ComplexityChartForcasts from "../../../Components/Organisms/ComplexChartForcasts";
+import ConsultorAusenciaForcast from "../../../Components/Organisms/ConsultorAusenciaForcast";
 const COMPONENTS = {
   AreaForcasts,
   FinanceForcasts,
   ComplexityChartForcasts,
+  ConsultorAusenciaForcast,
 };
 
 const Forecast = () => {
@@ -19,7 +21,11 @@ const Forecast = () => {
     const savedRightColumn = localStorage.getItem("forecastRightColumn");
     return savedRightColumn
       ? JSON.parse(savedRightColumn)
-      : ["FinanceForcasts", "ComplexityChartForcasts"];
+      : [
+          "FinanceForcasts",
+          "ComplexityChartForcasts",
+          "ConsultorAusenciaForcast",
+        ];
   });
 
   useEffect(() => {
