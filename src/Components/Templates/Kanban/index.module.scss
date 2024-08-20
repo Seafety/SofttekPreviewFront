@@ -1,0 +1,122 @@
+.kanbanContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    strong{
+        font-weight: 600;
+    }
+  }
+  
+  .kanbanColumn {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    width: 24rem;
+    min-height: 500px;
+    margin-right: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .kanbanColumn h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .kanbanCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .kanbanCard:hover {
+    transform: scale(1.03);
+  }
+  
+  .kanbanCard h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #007bff;
+  }
+  
+  .kanbanCard p {
+    font-size: 0.875rem;
+    color: #555;
+    margin: 4px 0;
+  }
+  
+  .cardDetails {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    font-size: 0.875rem;
+  }
+  
+  .expanded {
+    background-color: #e9f7ff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .level {
+    max-width: 20px;
+    text-align: center;
+    &.level_N1 {
+      color: #0277bd;
+      font-weight: 600;
+      background-color: #4fdcff4d;
+      border-radius: 5px;
+    }
+  
+    &.level_N2 {
+        color: #e78b00;
+        font-weight: 600;
+        background-color: #ffb5554d;
+        border-radius: 5px;
+    }
+  
+    &.level_N3 {
+        color: #d30000;
+        font-weight: 600;
+        background-color: #fc94944d;
+        border-radius: 5px;
+    }
+  }
+
+  .filterInput, .filterSelect {
+    width: 40%;
+    background-color: rgba(235, 235, 235, 0.308);
+    border: none;
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .filterInput:focus, .filterSelect:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.363); 
+  }
+  
+  .filterSelect {
+    cursor: pointer;
+    appearance: none !important;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    appearance: none;
+        option{
+            background-color: #ffffff;
+            height: 20px !important;
+            font-family: inherit;
+        }
+  }
