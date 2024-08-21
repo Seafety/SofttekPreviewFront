@@ -3,6 +3,7 @@ import HeaderComponent from "./Components/Organisms/Header/Index";
 import AppRoutes from "./Routes";
 import { BrowserRouter } from "react-router-dom";
 import "./Styles/_global.scss";
+
 const App = () => {
   return (
     <BrowserRouter>
