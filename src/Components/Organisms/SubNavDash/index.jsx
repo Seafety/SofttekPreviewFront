@@ -13,10 +13,6 @@ const SubNavDash = () => {
       setActiveSubNav("Real-Time");
     } else if (path === "/forecasts") {
       setActiveSubNav("Forecast");
-    } else if (path === "/demandas/data") {
-      setActiveSubNav("Data");
-    } else if (path === "/demandas/board") {
-      setActiveSubNav("Board");
     }
   }, [location]);
 
@@ -48,32 +44,6 @@ const SubNavDash = () => {
               onClick={() => toggleActiveSubnav("Forecast")}
             >
               <Link to="/forecasts">Forecast</Link>
-            </li>
-          </>
-        )}
-
-        {/* Itens que só aparecem para Demandas */}
-        {location.pathname.startsWith("/demandas") && (
-          <>
-            <li
-              className={`${
-                activeSubnav === "Data"
-                  ? styles.subnave_section_links_active
-                  : ""
-              }`}
-              onClick={() => toggleActiveSubnav("Data")}
-            >
-              <Link to="/demandas/data">Data</Link>
-            </li>
-            <li
-              className={`${
-                activeSubnav === "Board"
-                  ? styles.subnave_section_links_active
-                  : ""
-              }`}
-              onClick={() => toggleActiveSubnav("Board")}
-            >
-              <Link to="/demandas/board">Board</Link>
             </li>
           </>
         )}

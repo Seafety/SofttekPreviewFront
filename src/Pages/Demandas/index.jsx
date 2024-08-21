@@ -1,12 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import DemandasTemplate from "../../Components/Templates/DemandasTemplate";
+import Kanban from "../../Components/Templates/Kanban";
 
 const Demandas = () => {
   return <div>
-    <DemandasTemplate>
-      <Outlet />
-    </DemandasTemplate>
+  <Kanban />
   </div>;
 };
 
