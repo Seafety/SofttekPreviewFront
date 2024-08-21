@@ -45,8 +45,8 @@ const getAusenciaDotClass = (tipo) => {
   }
 };
 
-const FuncionarioCard = ({ funcionario, position }) => {
-  if (!funcionario) return null;
+const FuncionarioCard = ({ funcionario, position, onClose }) => {
+  const cardRef = useRef(null);
 
   const cardStyle = {
     top: position.top - 150, 
@@ -87,68 +87,81 @@ const FuncionarioCard = ({ funcionario, position }) => {
     },
   };
 
-  // Cálculo de mudança para cada período
   const change30 = stat30Days - 85;
   const change60 = stat60Days - 80;
   const change90 = stat90Days - 75;
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cardRef.current && !cardRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
+
   return (
-    <div className={styles.card} style={cardStyle}>
-    {funcionario.foto ? (
-      <img src={funcionario.foto} alt={funcionario.nome} className={styles.cardImg} />
-    ) : (
-      <div className={styles.iniciaisCircle}>
-        {getIniciais(funcionario.nome)}
-      </div>
-    )}
-    <h2>{funcionario.nome}</h2>
-    <p>Atividade: <span>{funcionario.descricao_at}</span></p>
-    <p>Senioridade: <span>{funcionario.senioridade}</span> </p>
-    <p>Especialidade: {funcionario.especialidade.join(', ')}</p>
-    <br/>
-
-    {funcionario.ausencia_ini && funcionario.ausencia_fin && (
-      <>
-        <p><span>Ausência: </span>{formatarDataBrasileira(funcionario.ausencia_ini)} até {formatarDataBrasileira(funcionario.ausencia_fin)}</p>
-        <span className={`${styles.ausenciaTag} ${getAusenciaTagClass(funcionario.ausencia_tipo)}`}>
-          {funcionario.ausencia_tipo}
-        </span>
-      </>
-    )}
-    <br/>
-    <br/>
-
-    <div className={styles.estatisticas}>
-      <div className={styles.statContainer}>
-        <div className={styles.statBox}>
-          <p>30 Dias</p>
-          <p className={styles.percentage}>{stat30Days}%</p>
-          <p className={styles.change} style={{ color: change30 >= 0 ? 'green' : 'red' }}>
-            {change30 >= 0 ? `+${change30}%` : `${change30}%`}
-          </p>
+    <div ref={cardRef} className={styles.card} style={cardStyle}>
+      {funcionario.foto ? (
+        <img src={funcionario.foto} alt={funcionario.nome} className={styles.cardImg} />
+      ) : (
+        <div className={styles.iniciaisCircle}>
+          {getIniciais(funcionario.nome)}
         </div>
-        <div className={styles.statBox}>
-          <p>60 Dias</p>
-          <p className={styles.percentage}>{stat60Days}%</p>
-          <p className={styles.change} style={{ color: change60 >= 0 ? 'green' : 'red' }}>
-            {change60 >= 0 ? `+${change60}%` : `${change60}%`}
-          </p>
-        </div>
-        <div className={styles.statBox}>
-          <p>90 Dias</p>
-          <p className={styles.percentage}>{stat90Days}%</p>
-          <p className={styles.change} style={{ color: change90 >= 0 ? 'green' : 'red' }}>
-            {change90 >= 0 ? `+${change90}%` : `${change90}%`}
-          </p>
-        </div>
-      </div>
+      )}
+      <h2>{funcionario.nome}</h2>
+      <p style={{ fontWeight: "700" }}>{funcionario.is}</p>
+      <p>Atividade: <span>{funcionario.descricao_at}</span></p>
+      <p>Senioridade: <span>{funcionario.senioridade}</span></p>
+      <p>Especialidade: {funcionario.especialidade.join(', ')}</p>
+      <br/>
 
-      <div className={styles.chartContainer}>
-        <Line data={data} options={options} />
+      {funcionario.ausencia_ini && funcionario.ausencia_fin && (
+        <>
+          <p><span>Ausência: </span>{formatarDataBrasileira(funcionario.ausencia_ini)} até {formatarDataBrasileira(funcionario.ausencia_fin)}</p>
+          <span className={`${styles.ausenciaTag} ${getAusenciaTagClass(funcionario.ausencia_tipo)}`}>
+            {funcionario.ausencia_tipo}
+          </span>
+        </>
+      )}
+      <br/>
+      <br/>
+
+      <div className={styles.estatisticas}>
+        <div className={styles.statContainer}>
+          <div className={styles.statBox}>
+            <p>30 Dias</p>
+            <p className={styles.percentage}>{stat30Days}%</p>
+            <p className={styles.change} style={{ color: change30 >= 0 ? 'green' : 'red' }}>
+              {change30 >= 0 ? `+${change30}%` : `${change30}%`}
+            </p>
+          </div>
+          <div className={styles.statBox}>
+            <p>60 Dias</p>
+            <p className={styles.percentage}>{stat60Days}%</p>
+            <p className={styles.change} style={{ color: change60 >= 0 ? 'green' : 'red' }}>
+              {change60 >= 0 ? `+${change60}%` : `${change60}%`}
+            </p>
+          </div>
+          <div className={styles.statBox}>
+            <p>90 Dias</p>
+            <p className={styles.percentage}>{stat90Days}%</p>
+            <p className={styles.change} style={{ color: change90 >= 0 ? 'green' : 'red' }}>
+              {change90 >= 0 ? `+${change90}%` : `${change90}%`}
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.chartContainer}>
+          <Line data={data} options={options} />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 };
 
 const Organograma = ({ equipe, onSelectFuncionario }) => {
@@ -186,18 +199,20 @@ const Organograma = ({ equipe, onSelectFuncionario }) => {
                   onClick={(e) => onSelectFuncionario(funcionario, e)}
                 >
                   {funcionario.foto ? (
-                      <img src={funcionario.foto} alt={funcionario.nome} className={styles.cardImg} />
+                    <img src={funcionario.foto} alt={funcionario.nome} className={styles.cardImg} />
                   ) : (
-                      <div className={styles.iniciaisCircle}>
+                    <div className={styles.iniciaisCircle}>
                       {getIniciais(funcionario.nome)}
-                      </div>
+                    </div>
                   )}
                   <div>
-                  <p> {funcionario.nome}
-                  <span className={`${styles.ausenciaDot} ${getAusenciaDotClass(funcionario.ausencia_tipo)}`}></span>
-                  </p>
-                  <div>
-                  <p style={{ color:"grey", marginTop:"5px"}}>{funcionario.senioridade}</p></div></div>
+                    <p>{funcionario.nome}
+                      <span className={`${styles.ausenciaDot} ${getAusenciaDotClass(funcionario.ausencia_tipo)}`}></span>
+                    </p>
+                    <div>
+                      <p style={{ color: "grey", marginTop: "5px" }}>{funcionario.senioridade}</p>
+                    </div>
+                  </div>
                 </div>
               ))
             ) : (
@@ -213,6 +228,8 @@ const Organograma = ({ equipe, onSelectFuncionario }) => {
 const OrganogramaPage = () => {
   const [selectedFuncionario, setSelectedFuncionario] = useState(null);
   const [equipe, setEquipe] = useState([]);
+  const [filtroNome, setFiltroNome] = useState('');
+  const [filtroId, setFiltroId] = useState('');
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const organogramaRef = useRef(null);
 
@@ -228,11 +245,48 @@ const OrganogramaPage = () => {
     setSelectedFuncionario(funcionario);
   };
 
+  const handleSearch = () => {
+    return equipe.filter(funcionario => {
+      const matchNome = funcionario.nome.toLowerCase().includes(filtroNome.toLowerCase());
+      const matchId = funcionario.is.toString().includes(filtroId);
+      return matchNome && matchId;
+    });
+  };
+
+  const handleCloseCard = () => {
+    setSelectedFuncionario(null);
+  };
+
   return (
     <div className={styles.organogramaPage} ref={organogramaRef}>
       <h1>Organograma</h1>
-      <Organograma equipe={equipe} onSelectFuncionario={handleSelectFuncionario} />
-      {selectedFuncionario && <FuncionarioCard funcionario={selectedFuncionario} position={position} />}
+
+      <div className={styles.filtroContainer}>
+        <input
+          type="text"
+          placeholder="Nome"
+          value={filtroNome}
+          onChange={(e) => setFiltroNome(e.target.value)}
+          className={styles.filtroInput}
+        />
+        <input
+          type="text"
+          placeholder="IS"
+          value={filtroId}
+          onChange={(e) => setFiltroId(e.target.value)}
+          className={styles.filtroInput}
+        />
+      </div>
+
+      <Organograma equipe={handleSearch()} onSelectFuncionario={handleSelectFuncionario} />
+
+      {selectedFuncionario && (
+        <FuncionarioCard 
+          funcionario={selectedFuncionario} 
+          position={position} 
+          onClose={handleCloseCard} 
+        />
+      )}
     </div>
   );
 };
