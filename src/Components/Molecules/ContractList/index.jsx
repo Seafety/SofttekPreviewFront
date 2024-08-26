@@ -2,12 +2,25 @@ import React from 'react';
 import styles from './index.module.scss';
 
 const ContractList = ({ contracts, onSelectContract, selectedContractId }) => {
+  const getStatusClass = (status) => {
+    switch (status) {
+      case 'Normal':
+        return styles.normal;
+      case 'Anormal':
+        return styles.anormal;
+      case 'Crítico':
+        return styles.critico; 
+      default:
+        return '';
+    }
+  };
+
   return (
     <div className={styles.contractList}>
       {contracts.map((contract, index) => (
-        <div 
-          key={contract.projeto} 
-          className={`${styles.contractItem} ${contract.projeto === selectedContractId ? styles.selected : ''}`}
+        <div
+          key={contract.projeto}
+          className={`${styles.contractItem} ${getStatusClass(contract.status)} ${contract.projeto === selectedContractId ? styles.selected : ''}`}
           onClick={() => onSelectContract(contract.projeto)}
         >
           <div className={styles.contractHeader}>
@@ -16,11 +29,11 @@ const ContractList = ({ contracts, onSelectContract, selectedContractId }) => {
               {contract.ativo ? '🟢 (ativo)' : '🔴 (inativo)'}
             </span>
           </div>
-          <div className={styles.contractRisk}>
-            <span>Risco: {contract.risco}</span>
+          <div className={`${styles.contractRisk} ${getStatusClass(contract.status)}`}>
+            <span>Risco: {contract.status}</span>
           </div>
           <div className={styles.contractValue}>
-            <span>{`R$ ${contract.valor_contrato.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`}</span>
+            <span>{contract.valor_contrato.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
           </div>
         </div>
       ))}
