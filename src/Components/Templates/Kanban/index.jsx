@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import chamados from "../../../json/chamados.json";
+import chamados from "../../../json/chamados.json"
 import styles from "./index.module.scss";
 
 const KanbanCard = ({ item, index, columnName, handleDragStart }) => {
@@ -30,6 +30,7 @@ const KanbanCard = ({ item, index, columnName, handleDragStart }) => {
       onClick={handleExpandClick}
     >
       <h4>{item.chamado}</h4>
+      
       <p>Consultor: <strong>{item.consultor}</strong></p>
       <p>Módulo: {item.modulo_chamado}</p>
       <p className={getComplexidadeClass(item.complexidade)}>{item.complexidade}</p>
@@ -147,12 +148,20 @@ const Kanban = () => {
   const filteredColumns = (columns) => {
     return Object.keys(columns).reduce((acc, columnName) => {
       acc[columnName] = columns[columnName].filter((item) => {
-        const matchesSearchTerm = item.chamado
-          .toString()
-          .includes(searchTerm.toLowerCase());
+        
+        const chamado = item.chamado ? item.chamado.toString().toLowerCase() : "";
+        const owner = item.owner ? item.owner.toLowerCase() : "";
+  
+        
+        const matchesSearchTerm =
+          chamado.includes(searchTerm.toLowerCase()) || 
+          owner.includes(searchTerm.toLowerCase()); // Filtro adicional para o owner
+  
         const matchesComplexidade =
           selectedComplexidade === "" ||
           item.complexidade === selectedComplexidade;
+  
+        
         return matchesSearchTerm && matchesComplexidade;
       });
       return acc;
