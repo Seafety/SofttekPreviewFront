@@ -42,6 +42,7 @@ const sortearConsultorPorModulo = (modulo) => {
   return consultores[randomIndex] || ""; // Retorna uma string vazia se não houver consultores
 };
 
+
 const KanbanCard = ({ item, index, columnName, handleDragStart }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -132,7 +133,7 @@ const Kanban = () => {
 
   useEffect(() => {
     if (!localStorage.getItem("kanbanColumns")) {
-      
+      const data = chamados.demandas;
       // Sorteia o consultor baseado no módulo do chamado
       const dataComConsultor = data.map(item => {
         const consultor = sortearConsultorPorModulo(item.modulo_chamado);
