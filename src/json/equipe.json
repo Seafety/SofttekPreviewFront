@@ -388,6 +388,88 @@
       "ausencia_ini": "",
       "ausencia_fin": "",
       "ausencia_tipo": ""
+    },
+
+    {
+      "is": "IS005",
+      "nome": "Carlos Silva",
+      "codigo_at": "MNG001",
+      "descricao_at": "Gerenciamento de Projetos",
+      "senioridade": "Gerente",
+      "especialidade": [
+        "Gestão de Projetos"
+      ],
+      "ausencia_ini": "",
+      "ausencia_fin": "",
+      "ausencia_tipo": ""
+    },
+    {
+      "is": "IS005",
+      "nome": "Ana Silva",
+      "codigo_at": "MAN001",
+      "descricao_at": "Gerente de Projetos",
+      "senioridade": "Gerente",
+      "especialidade": [
+        "Gestão de Projetos",
+        "Planejamento"
+      ],
+      "ausencia_ini": "2024-08-01",
+      "ausencia_fin": "2024-08-15",
+      "ausencia_tipo": "Férias"
+    },
+    {
+      "is": "IS006",
+      "nome": "Carlos Santos",
+      "codigo_at": "MAN002",
+      "descricao_at": "Gerente de TI",
+      "senioridade": "Gerente",
+      "especialidade": [
+        "Infraestrutura",
+        "Segurança"
+      ],
+      "ausencia_ini": "2024-06-10",
+      "ausencia_fin": "2024-06-20",
+      "ausencia_tipo": "Férias"
+    },
+    {
+      "is": "IS007",
+      "nome": "Mariana Oliveira",
+      "codigo_at": "MAN003",
+      "descricao_at": "Gerente de Marketing",
+      "senioridade": "Gerente",
+      "especialidade": [
+        "Marketing Digital",
+        "Estratégia"
+      ],
+      "ausencia_ini": "2024-07-15",
+      "ausencia_fin": "2024-07-17",
+      "ausencia_tipo": "Treinamento"
+    },  
+    {
+      "is": "IS006",
+      "nome": "Maria Oliveira",
+      "codigo_at": "VP001",
+      "descricao_at": "Visão Estratégica",
+      "senioridade": "VP",
+      "especialidade": [
+        "Estratégia"
+      ],
+      "ausencia_ini": "",
+      "ausencia_fin": "",
+      "ausencia_tipo": ""
+    },
+    {
+      "is": "IS007",
+      "nome": "Pedro Santos",
+      "codigo_at": "CEO001",
+      "descricao_at": "Direção Geral",
+      "senioridade": "CEO",
+      "especialidade": [
+        "Direção"
+      ],
+      "ausencia_ini": "",
+      "ausencia_fin": "",
+      "ausencia_tipo": ""
     }
   ]
 }
