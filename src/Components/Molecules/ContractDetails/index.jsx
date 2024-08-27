@@ -5,11 +5,11 @@ import styles from './index.module.scss';
 import DashSection from '../../Templates/DashSectionTemplate';
 
 const ContractDetails = ({ contract }) => {
-  const headers = ['Valor Envolvido', 'Início de Vigência', 'Final de Vigência', 'Horas Contratadas', 'Horas Utilizadas'];
+  const headers = ['Início de Vigência','Valor Envolvido', 'Final de Vigência', 'Horas Contratadas', 'Horas Utilizadas'];
   const data = [
     [
-      `R$ ${contract.valor_contrato.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`,
       new Date(contract.inicio_contrato).toLocaleDateString('pt-BR'),
+      `R$ ${contract.valor_contrato.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`,
       new Date(contract.fim_contrato).toLocaleDateString('pt-BR'),
       `${contract.baseline}h`,
       `${contract.baseline_consumido}h`
