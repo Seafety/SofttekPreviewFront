@@ -4,7 +4,8 @@ import ContractDetails from "../../Components/Molecules/ContractDetails";
 import ContractStats from "../../Components/Molecules/ContractStats"; 
 import ContractSummary from "../../Components/Molecules/ContractSummary";
 import contractsData from "../../json/projetos.json";
-import styles from './index.module.scss'; // Importando o estilo modular
+import styles from './index.module.scss';
+import TeamDivision from '../../Components/Molecules/TeamDivision';
 
 const Contratos = () => {
   const [contracts] = useState(contractsData.contratos);
@@ -22,6 +23,7 @@ const Contratos = () => {
       {selectedContract && (
         <div className={styles.detailsContainer}>
           <ContractDetails contract={selectedContract} />
+          <TeamDivision contract={selectedContract} />
           <ContractStats contract={selectedContract} />
           <ContractSummary contract={selectedContract} />
         </div>
