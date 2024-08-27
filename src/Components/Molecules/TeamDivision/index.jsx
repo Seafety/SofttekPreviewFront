@@ -14,9 +14,18 @@ const TeamDivision = ({ contract }) => {
             Produção: Math.floor(Math.random() * 10) + 1,
         };
 
-        const totalDemandas = Object.values(divisaoEquipe).reduce((acc, value) => acc + value, 0);
+        const tiposDemandas = {
+            Melhoria: Math.floor(Math.random() * 20) + 5,
+            Suporte: Math.floor(Math.random() * 25) + 10,
+            Desenvolvimento: Math.floor(Math.random() * 15) + 7,
+            Incidente: Math.floor(Math.random() * 30) + 15,
+            Consultoria: Math.floor(Math.random() * 10) + 3,
+            Treinamento: Math.floor(Math.random() * 12) + 6,
+        };
 
-        return { divisaoEquipe, totalDemandas };
+        const totalDemandas = Object.values(tiposDemandas).reduce((acc, value) => acc + value, 0);
+
+        return { divisaoEquipe, tiposDemandas, totalDemandas };
     };
 
     const [data, setData] = useState(generateRandomData());
@@ -26,10 +35,10 @@ const TeamDivision = ({ contract }) => {
     }, [contract]);
 
     const doughnutData = {
-        labels: Object.keys(data.divisaoEquipe),
+        labels: Object.keys(data.tiposDemandas),
         datasets: [
             {
-                data: Object.values(data.divisaoEquipe),
+                data: Object.values(data.tiposDemandas),
                 backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'],
                 hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
             }

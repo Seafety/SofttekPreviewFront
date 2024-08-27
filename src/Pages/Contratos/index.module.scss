@@ -27,3 +27,14 @@
     width: auto;
   }
   
+  .aboutContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.aboutContainer > * {
+    flex: 1;
+    margin: 0 10px;
+}
