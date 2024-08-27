@@ -7,6 +7,8 @@ import styles from './index.module.scss';
 import TeamDivision from '../../Components/Molecules/TeamDivision';
 import CriticidadeBar from '../../Components/Molecules/CriticidadeBar';
 import AnnotationBox from '../../Components/Organisms/AnnotationBox';
+import ContractSummary from '../../Components/Molecules/ContractSummary';
+import QuickAnalysis from '../../Components/Atoms/QuickAnalysis';
 
 const Contratos = () => {
   const [contracts] = useState(contractsData.contratos);
@@ -23,6 +25,8 @@ const Contratos = () => {
       />
       {selectedContract && (
         <div className={styles.detailsContainer}>
+          <QuickAnalysis />
+          <ContractSummary contract={selectedContract} />
           <ContractDetails contract={selectedContract} />
           <TeamDivision contract={selectedContract} />
           <ContractStats contract={selectedContract} />

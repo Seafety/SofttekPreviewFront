@@ -19,7 +19,7 @@ const ContractDetails = ({ contract }) => {
   return (
       <div className={styles.contractDetails}>
         <div style={{ marginBottom: "2rem"}}>
-        <DashSection title={`${contract.projeto} - ${contract.descricao}`}>
+        <DashSection title={"Detalhes"}>
         <Table headers={headers} data={data} />  </DashSection></div>
         <DashSection title={"Módulos Contratados"}>
             <div className={styles.modules}>  
