@@ -7,7 +7,6 @@ const CriticidadeBar = ({ contract }) => {
     const percentages = Array.from({ length: 3 }, () => Math.floor(Math.random() * 40) + 20);
     const total = percentages.reduce((acc, value) => acc + value, 0);
 
-    // Normalize the percentages to ensure they sum up to 100%
     return percentages.map((value) => Math.round((value / total) * 100));
   };
 
@@ -15,7 +14,7 @@ const CriticidadeBar = ({ contract }) => {
 
   useEffect(() => {
     setCriticidade(generateRandomCriticidade());
-  }, [contract]); // Recalcula quando o contrato muda
+  }, [contract]); 
 
   const criticidadeData = [
     { label: "Lowest", percentage: criticidade[0], color: "#b3e5fc" },

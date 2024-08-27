@@ -45,11 +45,11 @@
 
 .status {
   &.ativo {
-    color: #28a745; // verde
+    color: #28a745; 
   }
 
   &.inativo {
-    color: #6c757d; // cinza
+    color: #6c757d; 
   }
 }
 
@@ -58,15 +58,15 @@
   font-weight: 500;
 
   &.normal {
-    color: #28a745; // verde
+    color: #28a745; 
   }
 
   &.anormal {
-    color: #ffc107; // amarelo
+    color: #ffc107;
   }
 
   &.critico {
-    color: #dc3545; // vermelho
+    color: #dc3545; 
   }
 }
 
