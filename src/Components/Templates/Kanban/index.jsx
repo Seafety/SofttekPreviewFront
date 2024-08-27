@@ -2,6 +2,48 @@ import React, { useEffect, useState } from "react";
 import chamados from "../../../json/chamados.json";
 import styles from "./index.module.scss";
 
+// Função para obter consultores baseados no módulo
+const obterConsultoresPorModulo = (modulo) => {
+  const consultoresPorModulo = {
+    "SAP MM": ["John Doe", "Ava Yellow", "Mason Green"],
+    "SAP SD": ["John Doe", "Emily White", "Ava Yellow", "Mason Green"],
+    "SAP FICO": ["Jane Smith"],
+    "SAP HR": ["Jane Smith", "Liam Purple"],
+    "SAP HANA": ["Alice Brown", "Olivia Blue", "Lucas Red"],
+    "SAP C/4HANA":["Alice Brown", "Olivia Blue", "Lucas Red"],
+    "SAP BW": ["Alice Brown", "Sophia Grey", "Amelia Red"],
+    "SAP PP": ["Bob Green"],
+    "SAP QM": ["Bob Green"],
+    "SAP CRM": ["Emily White"],
+    "SAP PS": ["Michael Black", "Ella Brown"],
+    "SAP FI": ["Michael Black", "Mia Brown"],
+    "SAP ABAP": ["Olivia Blue", "Isabella Green", "Charlotte Grey", "Aiden Grey"],
+    "SAP PO": ["William Purple", "Ethan Blue"],
+    "SAP Fiori": ["William Purple", "Isabella Green", "Elijah Grey", "Charlotte Grey"],
+    "SAP Basis": ["James White", "Harper White", "Noah Green"],
+    "SAP Security": ["James White", "Harper White"],
+    "SAP CO": ["Henry Blue", "Lucas Yellow"],
+    "SAP SolMan": ["Henry Blue", "Lucas Yellow", "Charlotte Black"],
+    "SAP S/4HANA": ["Lucas Red"],
+    "SAP TM": ["Charlotte Black"],
+    "SAP Ariba": ["Ella Brown"],
+    "SAP SuccessFactors": ["Liam Purple"],
+    "SAP Basis (Estagiário)": ["Noah Green"],
+    "SAP PI": ["Emma Brown"],
+    "SAP HCM": ["Aiden Grey"]
+  };
+
+  return consultoresPorModulo[modulo] || [];
+};
+
+// Função para sortear um consultor aleatório para um módulo
+const sortearConsultorPorModulo = (modulo) => {
+  const consultores = obterConsultoresPorModulo(modulo);
+  const randomIndex = Math.floor(Math.random() * consultores.length);
+  return consultores[randomIndex] || ""; // Retorna uma string vazia se não houver consultores
+};
+
+
 const KanbanCard = ({ item, index, columnName, handleDragStart }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -92,21 +134,22 @@ const Kanban = () => {
 
   useEffect(() => {
     if (!localStorage.getItem("kanbanColumns")) {
-      const data = {
-        Backlog: chamados.demandas.filter(
-          (item) => item.status_chamado === "Backlog"
-        ),
-        "Em Andamento": chamados.demandas.filter(
-          (item) => item.status_chamado === "Em Andamento"
-        ),
-        Concluído: chamados.demandas.filter(
-          (item) => item.status_chamado === "Concluído"
-        ),
-        Cancelado: chamados.demandas.filter(
-          (item) => item.status_chamado === "Cancelado"
-        ),
+      const data = chamados.demandas;
+      // Sorteia o consultor baseado no módulo do chamado
+      const dataComConsultor = data.map(item => {
+        const consultor = sortearConsultorPorModulo(item.modulo_chamado);
+        return { ...item, consultor };
+      });
+
+     
+
+      const categorizedData = {
+        Backlog: dataComConsultor.filter(item => item.status_chamado === "Backlog"),
+        "Em Andamento": dataComConsultor.filter(item => item.status_chamado === "Em Andamento"),
+        Concluído: dataComConsultor.filter(item => item.status_chamado === "Concluído"),
+        Cancelado: dataComConsultor.filter(item => item.status_chamado === "Cancelado"),
       };
-      setColumns(data);
+      setColumns(categorizedData);
     }
   }, []);
 
@@ -146,7 +189,7 @@ const Kanban = () => {
 
   const filteredColumns = (columns) => {
     return Object.keys(columns).reduce((acc, columnName) => {
-      acc[columnName] = columns[columnName].filter((item) => {
+      acc[columnName] = columns[columnName].filter(item => {
         const matchesSearchTerm = item.chamado
           .toString()
           .includes(searchTerm.toLowerCase());
