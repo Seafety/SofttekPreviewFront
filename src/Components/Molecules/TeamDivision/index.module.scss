@@ -1,0 +1,68 @@
+.teamDivisionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.tableContainer {
+    width: 45%;
+    text-align: center;
+
+    h3 {
+        background-color: rgba(13, 41, 110, 0.85);
+        color: white;
+        padding: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: 600;
+    }
+
+    .teamTable {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ffffff;
+        }
+
+        th {
+            background-color:rgba(13, 41, 110, 0.85);
+            color: white;
+            font-weight: 600;
+        }
+
+        td {
+            font-size: 18px;
+        }
+
+        tbody tr {
+            &:nth-child(even) {
+                background-color: #f3f3f3;
+            }
+        }
+    }
+}
+
+.doughnutChartContainer {
+    width: 30%;
+    text-align: center;
+
+    h3 {
+        background-color: rgba(13, 41, 110, 0.85);
+        color: white;
+        padding: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: 600;
+    }
+
+    p {
+        margin-top: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+}

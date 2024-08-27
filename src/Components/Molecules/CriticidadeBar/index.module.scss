@@ -20,7 +20,7 @@
       &::before {
         content: attr(data-tooltip);
         position: absolute;
-        bottom: 15%; /* Posição acima do elemento */
+        bottom: 15%; 
         left: 50%;
         transform: translateX(-50%) translateY(10px);
         background: rgba(0, 0, 0, 0.75);
@@ -53,7 +53,7 @@
       &:hover::before, &:hover::after {
         opacity: 1;
         visibility: visible;
-        transform: translateX(-50%) translateY(0); /* Movimento para cima */
+        transform: translateX(-50%) translateY(0); 
         z-index: 10;
       }
     }
