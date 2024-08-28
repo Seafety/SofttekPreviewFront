@@ -4,7 +4,8 @@
   gap: 1rem;
   width: auto;
   max-height: 85vh; 
-  scrollbar-color: #000270 #f1f1f1; 
+  scrollbar-color: #000270 #f1f1f100; 
+  overflow-y: auto;
   }
   .contractList {
     width: 30%; 
@@ -36,8 +37,12 @@
     margin: 0 10px;
 }
 
-/* Para Firefox */
-.detailsContainer {
-  scrollbar-color: #000270 #f1f1f1; 
+
+.container::-webkit-scrollbar {
+  width: 5px;
 }
 
+.container::-webkit-scrollbar-thumb {
+  background-color: #0d296e;
+  border-radius: 10px;
+}
