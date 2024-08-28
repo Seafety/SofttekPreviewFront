@@ -6,6 +6,7 @@ import ComplexityChartForcasts from "../../../Components/Organisms/ComplexChartF
 import ConsultorAusenciaForcast from "../../../Components/Organisms/ConsultorAusenciaForcast";
 import ConsultorFeriasSugestao from "../../../Components/Organisms/SugestaoFeriasForcast";
 import ContractsForecastSection from "../../../Components/Organisms/ContractsForcasts";
+
 const COMPONENTS = {
   AreaForcasts,
   FinanceForcasts,
@@ -15,24 +16,26 @@ const COMPONENTS = {
   ContractsForecastSection,
 };
 
+const isValidComponentKey = (key) => {
+  return key && COMPONENTS[key];
+};
+
 const Forecast = () => {
   const [leftColumn, setLeftColumn] = useState(() => {
     const savedLeftColumn = localStorage.getItem("forecastLeftColumn");
-    return savedLeftColumn
-      ? JSON.parse(savedLeftColumn)
-      : ["AreaForcasts", "ConsultorAusenciaForcast"];
+    const parsedLeftColumn = savedLeftColumn ? JSON.parse(savedLeftColumn) : ["AreaForcasts", "ConsultorAusenciaForcast"];
+    return parsedLeftColumn.filter(isValidComponentKey); 
   });
 
   const [rightColumn, setRightColumn] = useState(() => {
     const savedRightColumn = localStorage.getItem("forecastRightColumn");
-    return savedRightColumn
-      ? JSON.parse(savedRightColumn)
-      : [
-          "FinanceForcasts",
-          "ComplexityChartForcasts",
-          "ConsultorFeriasSugestao",
-          "ContractsForecastSection",
-        ];
+    const parsedRightColumn = savedRightColumn ? JSON.parse(savedRightColumn) : [
+      "FinanceForcasts",
+      "ComplexityChartForcasts",
+      "ConsultorFeriasSugestao",
+      "ContractsForecastSection",
+    ];
+    return parsedRightColumn.filter(isValidComponentKey); 
   });
 
   useEffect(() => {
@@ -63,7 +66,9 @@ const Forecast = () => {
     const targetColumnData = targetColumn === "left" ? leftColumn : rightColumn;
 
     const [draggedItem] = sourceColumnData.splice(draggedIndex, 1);
-    targetColumnData.splice(dropIndex, 0, draggedItem);
+    if (isValidComponentKey(draggedItem)) { 
+      targetColumnData.splice(dropIndex, 0, draggedItem);
+    }
 
     sourceSetColumn([...sourceColumnData]);
     setColumn([...targetColumnData]);
@@ -82,6 +87,12 @@ const Forecast = () => {
       >
         {leftColumn.map((componentKey, index) => {
           const Component = COMPONENTS[componentKey];
+
+          if (!Component) {
+            console.error(`Componente não encontrado para a chave: ${componentKey}`);
+            return null;
+          }
+
           return (
             <div
               key={componentKey}
@@ -106,6 +117,12 @@ const Forecast = () => {
       >
         {rightColumn.map((componentKey, index) => {
           const Component = COMPONENTS[componentKey];
+
+          if (!Component) {
+            console.error(`Componente não encontrado para a chave: ${componentKey}`);
+            return null;
+          }
+
           return (
             <div
               key={componentKey}
