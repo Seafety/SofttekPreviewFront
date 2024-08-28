@@ -3,19 +3,17 @@
   justify-content: space-between;
   gap: 1rem;
   width: auto;
+  max-height: 85vh; 
+  scrollbar-color: #000270 #f1f1f1; 
   }
-  
   .contractList {
     width: 30%; 
-    max-height: 100vh; 
-    overflow-y: auto;
     border-right: 1px solid #ccc; 
-    padding: 10px;
     background-color: #f9f9f9;
   }
   
   .detailsContainer {
-    width: 70%; 
+    width: auto; 
     padding: 20px;
     overflow-y: auto;
     background-color: #fff;
@@ -24,7 +22,6 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
-    width: auto;
   }
   
   .aboutContainer {
@@ -38,3 +35,9 @@
     flex: 1;
     margin: 0 10px;
 }
+
+/* Para Firefox */
+.detailsContainer {
+  scrollbar-color: #000270 #f1f1f1; 
+}
+
