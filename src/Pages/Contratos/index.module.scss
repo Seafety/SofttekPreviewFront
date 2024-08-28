@@ -3,9 +3,9 @@
   justify-content: space-between;
   gap: 1rem;
   width: auto;
-  max-height: 100vh; 
+  max-height: 85vh; 
+  scrollbar-color: #000270 #f1f1f1; 
   }
-  
   .contractList {
     width: 30%; 
     border-right: 1px solid #ccc; 
@@ -35,3 +35,9 @@
     flex: 1;
     margin: 0 10px;
 }
+
+/* Para Firefox */
+.detailsContainer {
+  scrollbar-color: #000270 #f1f1f1; 
+}
+
