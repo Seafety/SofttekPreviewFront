@@ -22,25 +22,27 @@ const COMPONENTS = {
   ComplexChart,
 };
 
+const isValidComponentKey = (key) => {
+  return key && COMPONENTS[key];
+};
+
 const RealTime = () => {
   const [leftColumn, setLeftColumn] = useState(() => {
     const savedLeftColumn = localStorage.getItem("leftColumn");
-    return savedLeftColumn
-      ? JSON.parse(savedLeftColumn)
-      : ["StatusArea", "FinanceSection", "ContractsSection", "ConclusionChart"];
+    const parsedLeftColumn = savedLeftColumn ? JSON.parse(savedLeftColumn) : ["StatusArea", "FinanceSection", "ContractsSection", "ConclusionChart"];
+    return parsedLeftColumn.filter(isValidComponentKey); 
   });
 
   const [rightColumn, setRightColumn] = useState(() => {
     const savedRightColumn = localStorage.getItem("rightColumn");
-    return savedRightColumn
-      ? JSON.parse(savedRightColumn)
-      : [
-          "CriticidadeBar",
-          "OpenTickets",
-          "ConsultoresDisponiveis",
-          "ChamadosConsultor",
-          "ComplexChart",
-        ];
+    const parsedRightColumn = savedRightColumn ? JSON.parse(savedRightColumn) : [
+      "CriticidadeBar",
+      "OpenTickets",
+      "ConsultoresDisponiveis",
+      "ChamadosConsultor",
+      "ComplexChart",
+    ];
+    return parsedRightColumn.filter(isValidComponentKey); 
   });
 
   useEffect(() => {
@@ -71,7 +73,9 @@ const RealTime = () => {
     const targetColumnData = targetColumn === "left" ? leftColumn : rightColumn;
 
     const [draggedItem] = sourceColumnData.splice(draggedIndex, 1);
-    targetColumnData.splice(dropIndex, 0, draggedItem);
+    if (isValidComponentKey(draggedItem)) {
+      targetColumnData.splice(dropIndex, 0, draggedItem);
+    }
 
     sourceSetColumn([...sourceColumnData]);
     setColumn([...targetColumnData]);
@@ -90,6 +94,12 @@ const RealTime = () => {
       >
         {leftColumn.map((componentKey, index) => {
           const Component = COMPONENTS[componentKey];
+          
+          if (!Component) {
+            console.error(`Componente não encontrado para a chave: ${componentKey}`);
+            return null;
+          }
+
           return (
             <div
               key={componentKey}
@@ -114,6 +124,12 @@ const RealTime = () => {
       >
         {rightColumn.map((componentKey, index) => {
           const Component = COMPONENTS[componentKey];
+
+          if (!Component) {
+            console.error(`Componente não encontrado para a chave: ${componentKey}`);
+            return null;
+          }
+
           return (
             <div
               key={componentKey}

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import chamados from "../../../json/chamados.json"
 import styles from "./index.module.scss";
 
-// Função para obter consultores baseados no módulo
 const obterConsultoresPorModulo = (modulo) => {
   const consultoresPorModulo = {
     "SAP MM": ["John Doe", "Ava Yellow", "Mason Green"],
@@ -36,11 +35,10 @@ const obterConsultoresPorModulo = (modulo) => {
   return consultoresPorModulo[modulo] || [];
 };
 
-// Função para sortear um consultor aleatório para um módulo
 const sortearConsultorPorModulo = (modulo) => {
   const consultores = obterConsultoresPorModulo(modulo);
   const randomIndex = Math.floor(Math.random() * consultores.length);
-  return consultores[randomIndex] || ""; // Retorna uma string vazia se não houver consultores
+  return consultores[randomIndex] || ""; 
 };
 
 
@@ -105,14 +103,14 @@ const KanbanColumn = ({
     >
       <h3>{status}</h3>
       {columnData.map((item, index) => (
-        <KanbanCard
-          key={item.id}
-          index={index}
-          item={item}
-          columnName={status}
-          handleDragStart={handleDragStart}
-        />
-      ))}
+      <KanbanCard
+        key={`${item.id}-${index}`} 
+        index={index}
+        item={item}
+        columnName={status}
+        handleDragStart={handleDragStart}
+      />
+    ))}
     </div>
   );
 };
@@ -136,7 +134,6 @@ const Kanban = () => {
   useEffect(() => {
     if (!localStorage.getItem("kanbanColumns")) {
       const data = chamados.demandas;
-      // Sorteia o consultor baseado no módulo do chamado
       const dataComConsultor = data.map(item => {
         const consultor = sortearConsultorPorModulo(item.modulo_chamado);
         return { ...item, consultor };

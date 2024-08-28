@@ -16,6 +16,8 @@ const ForcastDxC = ({
     setIsExpanded(!isExpanded);
   };
 
+  const normalizedStatus = status.toLowerCase();
+
   const data = {
     labels: ["Outubro", "Novembro", "Dezembro"],
     datasets: [
@@ -67,7 +69,7 @@ const ForcastDxC = ({
           </span>
           {moduleName}
         </div>
-        <Status status={status} />
+        <Status status={normalizedStatus} />
       </div>
       <div
         className={`${styles.chartContent} ${

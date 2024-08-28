@@ -15,7 +15,7 @@ const ChamadosConsultor = () => {
     ["97", "Michel Santos", "Infra", "Junior", "critico"],
     ["50", "João Silva", "Compras +", "Pleno", "anormal"],
     ["49", "Marcio  Bolots", "Financeiro +", "Senior", "anormal"],
-    ["...", "...", "...", "...", "..."],
+    ["...", "...", "...", "...", ""],
     ["1", "Jocelyn Gion", "Vendas", "Senior", "normal"],
   ];
 

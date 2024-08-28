@@ -239,7 +239,7 @@ const Organograma = ({ equipe, onSelectFuncionario }) => {
             {funcionarios.length > 0 ? (
               funcionarios.map((funcionario) => (
                 <div
-                  key={funcionario.id}
+                  key={funcionario.is}
                   className={styles.funcionario}
                   onClick={(e) => onSelectFuncionario(funcionario, e)}
                 >
