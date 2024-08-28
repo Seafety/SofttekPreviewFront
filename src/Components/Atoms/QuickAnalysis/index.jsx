@@ -11,7 +11,7 @@ const QuickAnalysis = () => {
         type="text" 
         placeholder="O que deseja saber sobre o contrato?" 
       />
-        <image src={search}></image>
+        <img src={search}></img>
     </div>
   );
 };

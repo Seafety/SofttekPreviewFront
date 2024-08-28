@@ -43,8 +43,11 @@ const Table = ({ headers, data }) => {
 Table.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.arrayOf(
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.element])
+    )
   ).isRequired,
 };
+
 
 export default Table;
