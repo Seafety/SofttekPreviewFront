@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "initials": "JD",
+      "name": "João da Silva",
+      "email": "joao.silva@example.com",
+      "phone": "(11) 99999-9999",
+      "address": "Rua Exemplo, 123 - São Paulo, SP",
+      "seniority": "Senior",
+      "stat30Days": 75,    
+      "stat60Days": 80,      
+      "change60": 10,        
+      "stat90Days": 85,      
+      "change90": 15,        
+      "totalChamados": 120   
+    }
+  ]
+  
