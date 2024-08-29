@@ -20,20 +20,16 @@ const Area = ({
     setIsExpanded(!isExpanded);
   };
 
-  // Função para calcular a cor da capacidade
   const getCapacityColor = (capacidade) => {
     if (capacidade < 50) {
-      // De verde (0,255,0) para amarelo (255,255,0)
       const green = 255;
       const red = Math.floor((255 * capacidade) / 50);
       return `rgb(${red}, ${green}, 0)`;
     } else if (capacidade < 75) {
-      // De amarelo (255,255,0) para laranja (255,165,0)
       const red = 255;
-      const green = Math.floor(255 - (90 * (capacidade - 50)) / 25); // Transição de 255 a 165
+      const green = Math.floor(255 - (90 * (capacidade - 50)) / 25); 
       return `rgb(${red}, ${green}, 0)`;
     } else {
-      // De laranja (255,165,0) para vermelho (255,0,0)
       const red = 255;
       const green = Math.floor(165 - (165 * (capacidade - 75)) / 25);
       return `rgb(${red}, ${green}, 0)`;
@@ -86,7 +82,7 @@ const Area = ({
           </span>
           {nome}
         </div>
-        <Status status={status} />
+        <Status status={status.toLowerCase()} />
       </div>
       <div
         className={`${styles.areaContent} ${isExpanded ? styles.expanded : ""}`}
@@ -129,7 +125,10 @@ const Area = ({
 
 Area.propTypes = {
   nome: PropTypes.string.isRequired,
-  status: PropTypes.oneOf(["normal", "anormal", "critico"]).isRequired,
+  status: PropTypes.oneOf([
+    "normal", "anormal", "critico",
+    "NORMAL", "ANORMAL", "CRITICO"
+  ]).isRequired,  
   chamados_abertos: PropTypes.number.isRequired,
   chamados_iniciado: PropTypes.number.isRequired,
   avaliation: PropTypes.number.isRequired,

@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif !important;
+    img{
+        width: 20px;
+        opacity: 40%;
+    }
+  }
+  
+  .analysisButton {
+    background-color: rgba(13, 41, 110, 0.85); 
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  .analysisButton:hover {
+    background-color: #06236d;
+    transition: 0.3s;
+  }
+  
+  .searchInput {
+    flex-grow: 1;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000000;
+    outline: none;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+  

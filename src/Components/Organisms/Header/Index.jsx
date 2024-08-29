@@ -4,6 +4,7 @@ import Logo from "../../Atoms/Logo";
 import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "../../Atoms/MenuIcon";
 import styles from "./index.module.scss";
+import UserProfile from "../../Molecules/UserProfile/index.jsx";
 
 const HeaderComponent = () => {
   const location = useLocation();
@@ -22,6 +23,8 @@ const HeaderComponent = () => {
       setActiveNav("Demandas")
     }
   }, [location]);
+
+  const [selectedUserId, setSelectedUserId] = useState(1); // Use número em vez de string
 
   return (
     <header className={styles.header}>
@@ -62,7 +65,12 @@ const HeaderComponent = () => {
           </li>
         </ul>
       </nav>
-      <MenuIcon />
+
+      <div>
+      <UserProfile userId={selectedUserId} />
+      </div>
+
+      
     </header>
   );
 };

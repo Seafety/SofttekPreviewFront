@@ -1,0 +1,133 @@
+.summaryDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.summaryDetails p {
+    margin: 5px 0;
+    font-size: 1,5rem;
+    align-content: center;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.alta {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: red;
+}
+
+.média {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: orange;
+}
+
+.baixa {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: #28a745;
+}
+
+.positiva {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: #28a745;
+}
+
+.estável {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: orange;
+}
+
+.negativa {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: red;
+}
+
+.alto {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: red;
+}
+
+.moderado {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: orange;
+}
+
+.baixo {
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 7px 10px;
+    width: fit-content;
+    align-items: center;
+    display: inline-block;
+    margin-left: 10px;
+    justify-content: center;
+    background-color: #28a745;
+}

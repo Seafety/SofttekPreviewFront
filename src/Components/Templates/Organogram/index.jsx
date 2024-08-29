@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import equipeData from '../../../json/equipe.json'; 
 import styles from "./index.module.scss";
-import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Line, Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
 
 const generateRandomData = () => {
   const data = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
@@ -55,8 +55,11 @@ const FuncionarioCard = ({ funcionario, position, onClose }) => {
     zIndex: 1000,
   };
 
-  // Gerar os mesmos valores aleatórios para o gráfico e estatísticas
   const randomData = generateRandomData();
+  const randomDataBar = generateRandomData(3);
+
+  const totalChamados = randomDataBar.reduce((acc, curr) => acc + curr, 0);
+
   const stat30Days = randomData[7];
   const stat60Days = randomData[8];
   const stat90Days = randomData[9];
@@ -83,6 +86,40 @@ const FuncionarioCard = ({ funcionario, position, onClose }) => {
       title: {
         display: true,
         text: 'Estatísticas de Resolução de Chamados',
+      },
+    },
+  };
+
+  const dataBar = {
+    labels: ['N1', 'N2', 'N3'],
+    datasets: [
+      {
+        label:"",
+        data: randomDataBar,
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(255, 99, 132, 0.2)',
+        ],
+        borderColor: [
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(255, 99, 132, 1)',
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const optionsBar = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
+        text: 'Total de Chamados por Nível',
       },
     },
   };
@@ -159,6 +196,11 @@ const FuncionarioCard = ({ funcionario, position, onClose }) => {
         <div className={styles.chartContainer}>
           <Line data={data} options={options} />
         </div>
+
+        <div className={styles.chartContainer}>
+          <p className={styles.totalChamados}>Total de Chamados: {totalChamados}</p>
+          <Bar data={dataBar} options={optionsBar} />
+        </div>
       </div>
     </div>
   );
@@ -167,11 +209,14 @@ const FuncionarioCard = ({ funcionario, position, onClose }) => {
 const Organograma = ({ equipe, onSelectFuncionario }) => {
   const agruparPorSenioridade = (equipe) => {
     const senioridades = {
-        'Expert': [],
-        'Senior': [],
-        'Pleno': [],
-        'Junior': [],
-        'Estagiário': [],
+      'CEO': [],
+      'VP': [],
+      'Gerente': [],
+      'Expert': [],
+      'Senior': [],
+      'Pleno': [],
+      'Junior': [],
+      'Estagiário': [],
     };
 
     equipe.forEach((funcionario) => {
@@ -194,7 +239,7 @@ const Organograma = ({ equipe, onSelectFuncionario }) => {
             {funcionarios.length > 0 ? (
               funcionarios.map((funcionario) => (
                 <div
-                  key={funcionario.id}
+                  key={funcionario.is}
                   className={styles.funcionario}
                   onClick={(e) => onSelectFuncionario(funcionario, e)}
                 >

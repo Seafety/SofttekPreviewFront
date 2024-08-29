@@ -1,7 +1,7 @@
 import React from "react";
 import DashSection from "../../Templates/DashSectionTemplate";
 import Area from "../../Molecules/Area";
-import styles from "./index.module.scss"; // Certifique-se de que este arquivo SCSS esteja importado
+import styles from "./index.module.scss"; 
 
 const StatusArea = () => {
   const areasData = [

@@ -19,7 +19,7 @@ const Status = ({ status }) => {
 };
 
 Status.propTypes = {
-  status: PropTypes.oneOf(["normal", "anormal", "critico"]).isRequired,
+  status: PropTypes.oneOf(["normal", "anormal", "critico", ""]).isRequired,
 };
 
 export default Status;
