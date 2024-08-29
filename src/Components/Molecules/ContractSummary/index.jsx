@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styles from './index.module.scss';
 import DashSection from '../../Templates/DashSectionTemplate';
 
@@ -21,7 +21,7 @@ const getRisk = (complexity) => {
 
 const ContractSummary = ({ contract }) => {
     const complexity = getComplexity(contract.valor_contrato);
-    const trend = getTrend();
+    const trend = useMemo(() => getTrend(), []);
     const risk = getRisk(complexity);
 
     return (
@@ -29,6 +29,12 @@ const ContractSummary = ({ contract }) => {
             <div className={styles.contractSummaryContainer}>
                 <div className={styles.summaryDetails}>
                     <p>
+                        <strong>Owner:</strong>
+                        <span>{` ${contract.owner}`}</span>
+                    </p>
+                    <p>
+
+
                         <strong>Complexidade:</strong> 
                         <span className={styles[complexity.toLowerCase()]}>
                             {` ${complexity}`}

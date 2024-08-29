@@ -4,6 +4,7 @@
       "projeto": "PROJ001",
       "descricao": "Projeto de Implementação SAP",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Mariana Oliveira",
       "modulo": [
         "SAP MM",
         "SAP SD"
@@ -40,6 +41,7 @@
       "projeto": "PROJ002",
       "descricao": "Suporte AMS Global",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Santos",
       "modulo": [
         "SAP FICO",
         "SAP HR"
@@ -76,6 +78,7 @@
       "projeto": "PROJ003",
       "descricao": "Implementação de SAP HANA",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Ana Silva",
       "modulo": [
         "SAP HANA",
         "SAP BW"
@@ -112,6 +115,7 @@
       "projeto": "PROJ004",
       "descricao": "Suporte Técnico SAP Basis",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Silva",
       "modulo": [
         "SAP Basis",
         "SAP Security"
@@ -148,6 +152,7 @@
       "projeto": "PROJ005",
       "descricao": "Projeto de Implementação SAP Ariba",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Silva",
       "modulo": [
         "SAP Ariba",
         "SAP MM"
@@ -184,6 +189,7 @@
       "projeto": "PROJ006",
       "descricao": "Suporte AMS Financeiro",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Ana Silva",
       "modulo": [
         "SAP FICO",
         "SAP CO"
@@ -220,6 +226,7 @@
       "projeto": "PROJ007",
       "descricao": "Implementação de SAP SuccessFactors",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Santos",
       "modulo": [
         "SAP HR",
         "SAP SuccessFactors"
@@ -256,6 +263,7 @@
       "projeto": "PROJ008",
       "descricao": "Suporte Técnico SAP PI",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Mariana Oliveira",
       "modulo": [
         "SAP PI",
         "SAP PO"
@@ -292,6 +300,7 @@
       "projeto": "PROJ009",
       "descricao": "Projeto de Integração SAP",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Mariana Oliveira",
       "modulo": [
         "SAP PI",
         "SAP HANA"
@@ -328,6 +337,7 @@
       "projeto": "PROJ010",
       "descricao": "Suporte SAP CRM",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Santos",
       "modulo": [
         "SAP CRM",
         "SAP SD"
@@ -364,6 +374,7 @@
       "projeto": "PROJ011",
       "descricao": "Projeto de Implementação SAP SolMan",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Ana Silva",
       "modulo": [
         "SAP SolMan",
         "SAP ITSM"
@@ -400,6 +411,7 @@
       "projeto": "PROJ012",
       "descricao": "Projeto de Otimização de Processos SAP",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Silva",
       "modulo": [
         "SAP MM",
         "SAP PP"
@@ -436,6 +448,7 @@
       "projeto": "PROJ013",
       "descricao": "Implementação SAP C/4HANA",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Silva",
       "modulo": [
         "SAP C/4HANA",
         "SAP CRM"
@@ -472,6 +485,7 @@
       "projeto": "PROJ014",
       "descricao": "Suporte AMS para SAP HCM",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Ana Silva",
       "modulo": [
         "SAP HCM",
         "SAP HR"
@@ -508,6 +522,7 @@
       "projeto": "PROJ015",
       "descricao": "Implementação SAP BW/4HANA",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Santos",
       "modulo": [
         "SAP BW",
         "SAP HANA"
@@ -544,6 +559,7 @@
       "projeto": "PROJ016",
       "descricao": "Suporte Técnico SAP",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Mariana Oliveira",
       "modulo": [
         "SAP MM",
         "SAP SD"
@@ -580,6 +596,7 @@
       "projeto": "PROJ017",
       "descricao": "Implementação SAP TM",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Mariana Oliveira",
       "modulo": [
         "SAP TM",
         "SAP LE"
@@ -616,6 +633,7 @@
       "projeto": "PROJ018",
       "descricao": "Suporte AMS para SAP CO",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Santos",
       "modulo": [
         "SAP CO",
         "SAP FI"
@@ -652,6 +670,7 @@
       "projeto": "PROJ019",
       "descricao": "Projeto de Integração SAP",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Ana Silva",
       "modulo": [
         "SAP PI",
         "SAP HANA"
@@ -688,6 +707,7 @@
       "projeto": "PROJ020",
       "descricao": "Suporte SAP S/4HANA",
       "tipo_contrato": "Baseline Funcional",
+      "owner": "Carlos Santos",
       "modulo": [
         "SAP S/4HANA",
         "SAP FICO"
