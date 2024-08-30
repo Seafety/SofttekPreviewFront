@@ -4,8 +4,10 @@ Esse projeto foi desenvolvido para o trabalho da faculdade conhecido como Challe
 🚀 Começando
 
 Para rodar o projeto você precisa seguir as etapas: 
-npm install ou yarn install 
-npm run dev ou yarn run dev
+
+- npm install ou yarn install 
+
+- npm run dev ou yarn run dev
 
 📦 Implantação
 
@@ -22,10 +24,15 @@ Vite + React, Javascript, SCSS.
 ✒️ Autores
 
 Frontend: Lúcia Boutti, Maria Clara e Thiago Eiji.
+
 Designer: Lúcia Boutti, Maria Clara, Thiago Eiji, Miguel Lima e Ana Beatriz.
+
 Documentação: Lúcia Boutti.
+
 Banco de dados: Ana Beatriz e Miguel Lima.
+
 Backend: Ana Beatriz, Miguel Lima e Thiago Eiji.
+
 Vídeo Pitch: Maria Clara.
 
 🎁 Expressões de gratidão
