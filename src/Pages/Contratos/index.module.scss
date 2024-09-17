@@ -18,7 +18,7 @@
   .contractList {
     width: 30%; 
     border-right: 1px solid #ccc; 
-    background-color: #f9f9f9;
+    background-color: #f9f9f9
   }
   
   .detailsContainer {
@@ -70,4 +70,8 @@
 .filterInput:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.363);
+}
+
+.filterContainer {
+  margin-bottom: 2rem;
 }

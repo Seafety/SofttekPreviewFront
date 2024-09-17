@@ -4,10 +4,10 @@ import SubNavDash from "../../Organisms/SubNavDash";
 
 function HomeTemplate({ children }) {
   return (
-    <>
-      <SubNavDash />
+    <div style={{maxHeight:'85vh', overflowY:'auto', overflowX:'hidden', width:'100%'}}>
+      <SubNavDash />  
       {children}
-    </>
+    </div>
   );
 }
 
