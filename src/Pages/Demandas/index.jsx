@@ -1,8 +1,9 @@
 import React from "react";
 import Kanban from "../../Components/Templates/Kanban";
+import styles from "./index.module.scss";
 
 const Demandas = () => {
-  return <div style={{maxHeight:'85vh', overflowY:'auto', overflowX:'hidden', width:'100%'}} >
+  return <div className={styles.demandasTemplate} >
   <Kanban />
   </div>;
 };

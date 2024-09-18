@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SubNavDash from "../../Organisms/SubNavDash";
+import styles from "./index.module.scss";
 
 function HomeTemplate({ children }) {
   return (
-    <div style={{maxHeight:'85vh', overflowY:'auto', overflowX:'hidden', width:'100%'}}>
+    <div className={styles.homeTemplate}>
       <SubNavDash />  
       {children}
     </div>
