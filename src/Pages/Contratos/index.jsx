@@ -16,7 +16,6 @@ const Contratos = () => {
   const [filterOwner, setFilterOwner] = useState(''); // Estado para o filtro de "owner"
   
 
-  // Filtra os contratos com base no texto do filtro
   const filteredContracts = contracts.filter(contract =>
     contract.owner.toLowerCase().includes(filterOwner.toLowerCase())
   );
@@ -26,7 +25,7 @@ const Contratos = () => {
 
 
   return (
-    <div className={styles.pageContainer}>
+    <div style={{maxHeight:'85vh', overflowY:'auto', overflowX:'hidden', width:'100%'}} className={styles.pageContainer}>
    
     <div className={styles.filterContainer}>
       <input
