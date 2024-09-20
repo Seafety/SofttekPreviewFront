@@ -1,0 +1,15 @@
+.homeTemplate{
+    max-height: 85vh; 
+    overflow-Y: auto;
+    overflow-X: hidden;
+    width: 100%;
+}
+
+.homeTemplate::-webkit-scrollbar {
+  width: 5px;
+}
+
+.homeTemplate::-webkit-scrollbar-thumb {
+  background-color: #0d296e;
+  border-radius: 10px;
+}

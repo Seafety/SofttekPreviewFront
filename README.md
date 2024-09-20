@@ -5,7 +5,9 @@ Esse projeto foi desenvolvido para o trabalho da faculdade conhecido como Challe
 
 Para rodar o projeto você precisa seguir as etapas: 
 
-- npm install ou yarn install 
+
+- npm install ou yarn install
+- em caso de erro com instalação tente: npm install --legacy-peer-deps
 
 - npm run dev ou yarn run dev
 

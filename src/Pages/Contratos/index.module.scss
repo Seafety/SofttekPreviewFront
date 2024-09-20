@@ -8,17 +8,15 @@
 .container {
   display: flex;
   justify-content: space-between;
-
   gap: 1rem;
   width: auto;
-  max-height: 85vh; 
-  scrollbar-color: #000270 #f1f1f100; 
+  max-height: 85vh;   
   overflow-y: auto;
   }
   .contractList {
     width: 30%; 
     border-right: 1px solid #ccc; 
-    background-color: #f9f9f9;
+    background-color: #f9f9f9
   }
   
   .detailsContainer {
@@ -45,16 +43,6 @@
     margin: 0 10px;
 }
 
-
-.container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.container::-webkit-scrollbar-thumb {
-  background-color: #0d296e;
-  border-radius: 10px;
-}
-
 .filterInput {
   width: 40%;
   background-color: rgba(235, 235, 235, 0.308);
@@ -70,4 +58,17 @@
 .filterInput:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.363);
+}
+
+.filterContainer {
+  margin-bottom: 2rem;
+}
+
+.detailsContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.detailsContainer::-webkit-scrollbar-thumb {
+  background-color: #0d296e;
+  border-radius: 10px;
 }

@@ -44,6 +44,11 @@
 }
 
 .status {
+  display: flex;
+  width: 30%;
+  align-self: end;
+  align-items: end;
+  justify-content: end;
   &.ativo {
     color: #28a745; 
   }
@@ -77,4 +82,13 @@
   border-radius: 10px;
   border: solid 1px #0D296E;
   padding: 10px;
+}
+
+.contractList::-webkit-scrollbar {
+  width: 5px;
+}
+
+.contractList::-webkit-scrollbar-thumb {
+  background-color: #0d296e;
+  border-radius: 10px;
 }
